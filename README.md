@@ -168,3 +168,118 @@ The age groups, like the clubs will be pre populated within the database to ensu
 **Training Days**
 Training days will also be pre populated in the database. Users will be able to select more than one option as many teams train more than once a week.
 
+
+## Skeleton
+
+
+<details>
+<summary>Homepage</summary>
+<details>
+<summary>Mobile</summary>
+
+![Mobile](readme-images/wf-homepage-mobile.png)
+</details>
+<details>
+<summary>Desktop</summary>
+*Enter Link Here*
+
+</details>
+</details>
+
+<details>
+<summary>Register</summary>
+<details>
+<summary>Mobile</summary>
+
+![Mobile](readme-images/wf-register-mobile.png)
+</details>
+<details>
+<summary>Desktop</summary>
+*Enter Link Here*
+
+</details>
+</details>
+
+<details>
+<summary>Sign In</summary>
+<details>
+<summary>Mobile</summary>
+
+![Mobile](readme-images/wf-signin-mobile.png)
+</details>
+<details>
+<summary>Desktop</summary>
+*Enter Link Here*
+
+</details>
+</details>
+
+<details>
+<summary>My Teams</summary>
+<details>
+<summary>Mobile</summary>
+
+![Mobile](readme-images/wf-my-teams-mobile.png)
+</details>
+<details>
+<summary>Desktop</summary>
+*Enter Link Here*
+
+</details>
+</details>
+
+<details>
+<summary>Teams</summary>
+<details>
+<summary>Mobile</summary>
+
+![Mobile](readme-images/wf-teams-mobile.png)
+</details>
+<details>
+<summary>Desktop</summary>
+*Enter Link Here*
+
+</details>
+</details>
+
+<details>
+<summary>Team Profile</summary>
+<details>
+<summary>Mobile</summary>
+
+![Mobile](readme-images/wf-team-profile-mobile.png)
+</details>
+<details>
+<summary>Desktop</summary>
+*Enter Link Here*
+
+</details>
+</details>
+
+<details>
+<summary>Add Team</summary>
+<details>
+<summary>Mobile</summary>
+
+![Mobile](readme-images/wf-add-team-mobile.png)
+</details>
+<details>
+<summary>Desktop</summary>
+*Enter Link Here*
+
+</details>
+</details>
+
+<details>
+<summary>My Account</summary>
+<details>
+<summary>Mobile</summary>
+
+![Mobile](readme-images/wf-my-account-mobile.png)
+</details>
+<details>
+<summary>Desktop</summary>
+*Enter Link Here*
+
+</details>
+</details>
