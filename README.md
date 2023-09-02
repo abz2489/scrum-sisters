@@ -32,8 +32,8 @@ Account holders
 - As a user with an account, I want to add links to my team's social media.
 
 
-# Scope
-## Features
+## Scope
+### Features
 
 Responsive design for use on mobile, tablet and desktops.
 
@@ -134,7 +134,37 @@ Responsive design for use on mobile, tablet and desktops.
 - Training location
 - Social media URL 
 
-## Future Features
+### Future Features
 - Introduce Clubs
     - Club and Users have one to one relationship
     - Club and Teams have one to many relationship
+
+
+## Structure
+
+**Site Structure**
+![Structure mind map](readme-images/ss-structure.png "Site Structure Map")
+
+**Relational Database Structure**
+![Structure mind map](readme-images/ss-db-relational.png "Site Structure Map")
+
+**Non Account Holders**
+No account is needed to simply view teams and their profile. Scrum Sisters is designed for people to find teams suitable to them. It's important that this is as easy to achieve as possible for visitors.
+
+**Users**
+An account is needed if a user wishes to upload a team to Scrum Sisters. Upon completion of the registration form, the user will need to select a rugby club from the list provided. This user acts as an admin for the club and its teams. Each club can have one user and a user can only have one club.
+Other details include first name, last name, email and password.
+
+**Clubs**
+All South Wales rugby clubs will be entered into the clubs table at the development stage to avoid any duplicate entries due to user error.
+This will display to the user as a dropdown box on the registration page.
+
+**Teams**
+Clubs can have many teams. The teams database will hold the team name, club id, age group, training days, training time, training location and URL to social media pages.
+
+**Age Group**
+The age groups, like the clubs will be pre populated within the database to ensure uniformity in catergories. For example if one user was to enter "under 15s" and another "U15s", finding the right age group as a visitor will become much more complicated.
+
+**Training Days**
+Training days will also be pre populated in the database. Users will be able to select more than one option as many teams train more than once a week.
+
