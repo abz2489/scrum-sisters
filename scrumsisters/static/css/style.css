@@ -1,0 +1,16 @@
+/*BASE.HTML*/
+/* MOBILE TOP BAR */
+#top-logo-bar {
+    height: 100px;
+    background-color: #1F1F1F;
+}
+
+
+/* MOBILE BOTTOM NAV BAR */
+nav#nav-bar.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 65px;
+    background-color: #1F1F1F;
+  }
