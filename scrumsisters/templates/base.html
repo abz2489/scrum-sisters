@@ -2,13 +2,42 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scrum Sisters</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+  <title>Scrum Sisters</title>
 </head>
 
 <body>
-    Hello! Welcome to Scrum Sisters!
+  <!--TOP LOGO BAR-->
+  <nav>
+    <div class="valign-wrapper" id="top-logo-bar">
+      <a href="#" class="brand-logo center"><img class="logo"
+          src="{{ url_for('static', filename='images/ss-logo.png')}}"></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Teams</a></li>
+        <li><a href="#">Register</a></li>
+        <li><a href="#">Sign In</a></li>
+        <li><a href="#">My Account</a></li>
+        <li><a href="#">Sign Out</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!--BOTTOM NAVIGATION BAR MOBILE & SMALL TABLET SCREENS-->
+  <nav class="bottom-nav hide-on-large-only" id="nav-bar">
+    <div class="nav-wrapper">
+      <div class="center">
+        <span><a href="#"><i class="material-symbols-outlined" id="user-icon">person</i></a></span>
+        <span><a href="#"><i class="material-symbols-outlined" id="home-icon">home</i></a></span>
+        <span><a href="#"><i class="material-symbols-outlined" id="menu-icon">menu</i></a></span>
+      </div>
+    </div>
+  </nav>
 </body>
 
 </html>
