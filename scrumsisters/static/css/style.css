@@ -5,6 +5,12 @@
     background-color: #1F1F1F;
 }
 
+.logo {
+    width: 275px;
+    height: 57px;
+    margin-top: 10px;
+}
+
 
 /* MOBILE BOTTOM NAV BAR */
 nav#nav-bar.bottom-nav {
