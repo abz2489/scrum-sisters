@@ -1,20 +1,36 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>User Registration Form</h1>
-<form method="POST">
-    {{ form.hidden_tag() }}
+<h2>Register</h2>
+{% for message in get_flashed_messages() %}
+<div class="card-panel s12 green accent-2">
+    {{ message }}
+</div>
+{% endfor %}
+<div class="row">
+    <form class="col s12" method="POST">
+        {{ form.hidden_tag() }}
+        <div class="row">
+            <div class="input-field col s12">
+                {{ form.first_name.label }}
+                {{ form.first_name() }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                {{ form.last_name.label }}
+                {{ form.last_name() }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                {{ form.email.label }}
+                {{ form.email() }}
+            </div>
+        </div>
+        {{ form.submit() }}
+    </form>
 
-    {{ form.first_name.label }}
-    {{ form.first_name() }}
-
-    {{ form.last_name.label }}
-    {{ form.last_name() }}
-
-    {{ form.email.label }}
-    {{ form.email() }}
-
-    {{ form.submit() }}
 
 
-</form>
-{% endblock %}
+
+    {% endblock %}
