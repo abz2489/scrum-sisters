@@ -2,7 +2,7 @@ from flask import render_template, flash
 from forms import UserRegistrationForm
 from scrumsisters import app, db
 from scrumsisters.models import Users, Clubs, Age, Days, Teams
-
+from werkzeug.security import generate_password_hash, check_password_hash
 
 @app.route("/")
 def home():
