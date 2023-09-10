@@ -18,7 +18,7 @@ class Users(db.Model):
 
     def __repr__(self):
         # __repr__ to represent itself in the form of a string
-        return self
+        return self.first_name
 
 
 class Clubs(db.Model):
@@ -39,7 +39,7 @@ class Clubs(db.Model):
 
     def __repr__(self):
         # __repr__ to represent itself in the form of a string
-        return self
+        return self.club_name
 
 
 class Age(db.Model):
@@ -54,22 +54,22 @@ class Age(db.Model):
 
     def __repr__(self):
         # __repr__ to represent itself in the form of a string
-        return self
+        return self.age_group
 
 
-class Training(db.Model):
+class Days(db.Model):
     """
     Training Days schema
     """
     id = db.Column(db.Integer, primary_key=True)
-    training_day = db.Column(db.String, nullable=False)
+    day = db.Column(db.String, nullable=False)
 
     # relationships
-    teams = db.relationship("Teams", backref="training", lazy=True)
+    teams = db.relationship("Teams", backref="days", lazy=True)
 
     def __repr__(self):
         # __repr__ to represent itself in the form of a string
-        return self
+        return self.day
 
 
 class Teams(db.Model):
@@ -81,8 +81,8 @@ class Teams(db.Model):
     club_id = db.Column(db.Integer, db.ForeignKey("clubs.id"), nullable=False)
     age_group_id = db.Column(
         db.Integer, db.ForeignKey("age.id"), nullable=False)
-    training_id = db.Column(db.Integer, db.ForeignKey(
-        "training.id"), nullable=False)
+    days_id = db.Column(db.Integer, db.ForeignKey(
+        "days.id"), nullable=False)
     training_time = db.Column(db.Time, nullable=False)
     training_location = db.Column(db.Text, nullable=False)
     fb_url = db.Column(db.Text, nullable=True)
@@ -92,4 +92,4 @@ class Teams(db.Model):
 
     def __repr__(self):
         # __repr__ to represent itself in the form of a string
-        return self
+        return self.team_name
