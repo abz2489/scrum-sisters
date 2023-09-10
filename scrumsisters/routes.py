@@ -1,4 +1,4 @@
-from flask import render_template
+from flask import render_template, flash
 from forms import UserRegistrationForm
 from scrumsisters import app, db
 from scrumsisters.models import Users, Clubs, Age, Days, Teams
@@ -22,6 +22,7 @@ def register():
         form.last_name.data = ''
         email = form.email.data
         form.email.data = ''
+        flash("Registration successful")
     return render_template(
         "register.html",
         first_name=first_name,
