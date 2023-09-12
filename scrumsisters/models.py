@@ -1,4 +1,5 @@
 from scrumsisters import db
+from werkzeug.security import generate_password_hash, check_password_hash
 
 
 class Users(db.Model):
@@ -9,9 +10,21 @@ class Users(db.Model):
     first_name = db.Column(db.String(50), nullable=False)
     last_name = db.Column(db.String(50), nullable=False)
     email = db.Column(db.String(100), unique=True, nullable=False)
-    password = db.Column(db.String(50), nullable=False)
-    confirm_password = db.Column(db.String(50), nullable=False)
     club_id = db.Column(db.Integer, db.ForeignKey("clubs.id"), nullable=False)
+
+    # Hashed passwords
+    user_password = db.Column(db.String(50))
+
+    @property
+    def password(self):
+        raise AttributeError("password is not a readable attribute!")
+
+    @password.setter
+    def password(self, password):
+        self.user_password = generate_password_hash(password)
+
+    def verify_password(self, password):
+        return check_password_hash(self.user_password, password)
 
     # relationships
     teams = db.relationship("Teams", backref="users", lazy=True)
