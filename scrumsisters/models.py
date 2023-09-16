@@ -42,7 +42,7 @@ class Clubs(db.Model):
     club_name = db.Column(db.String(150), nullable=False)
 
     # relationships
-    users = db.relationship("Users", backref="clubs", lazy=True)
+    users = db.relationship("Users", backref="clubs", uselist=False)
     teams = db.relationship(
         "Teams",
         backref="clubs",
