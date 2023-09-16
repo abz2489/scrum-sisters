@@ -12,7 +12,7 @@ from wtforms_sqlalchemy.fields import QuerySelectField
 # from scrumsisters.models import clubs_list
 
 
-# Create a Form Class
+# User registration form class
 class UserRegistrationForm(FlaskForm):
     first_name = StringField("First Name", validators=[DataRequired()])
     last_name = StringField("Last Name", validators=[DataRequired()])
@@ -22,4 +22,11 @@ class UserRegistrationForm(FlaskForm):
             'confirm_password', message="Passwords do not match!")])
     confirm_password = PasswordField(
         'Confirm_password', validators=[DataRequired()])
+    submit = SubmitField("Submit")
+
+
+# User sign in form class
+class UserSignInForm(FlaskForm):
+    email = StringField("Email", validators=[DataRequired()])
+    password = PasswordField("Password", validators=[DataRequired()])
     submit = SubmitField("Submit")
