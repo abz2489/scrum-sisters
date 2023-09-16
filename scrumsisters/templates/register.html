@@ -1,36 +1,27 @@
 {% extends "base.html" %}
 {% block content %}
-<h2>Register</h2>
-{% for message in get_flashed_messages() %}
-<div class="card-panel s12 green accent-2">
-    {{ message }}
-</div>
-{% endfor %}
-<div class="row">
-    <form class="col s12" method="POST">
+
+{% if first_name %}
+    <h1>Hello {{ first_name }}!</h1>
+{% else %}
+    <h2>Register</h2>
+
+    <form method="POST">
         {{ form.hidden_tag() }}
-        <div class="row">
-            <div class="input-field col s12">
-                {{ form.first_name.label }}
-                {{ form.first_name() }}
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                {{ form.last_name.label }}
-                {{ form.last_name() }}
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                {{ form.email.label }}
-                {{ form.email() }}
-            </div>
-        </div>
+
+        {{ form.first_name.label }}
+        {{ form.first_name() }}
+
+        {{ form.last_name.label }}
+        {{ form.last_name() }}
+
+        {{ form.email.label }}
+        {{ form.email() }}
+
         {{ form.submit() }}
     </form>
+{% endif %}
 
 
 
-
-    {% endblock %}
+{% endblock %}
