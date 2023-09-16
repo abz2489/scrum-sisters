@@ -5,27 +5,28 @@
     <h1>Hello {{ first_name }}!</h1>
 {% else %}
     <h2>Register</h2>
+    <div class="container">
+        <form method="POST">
+            {{ form.hidden_tag() }}
 
-    <form method="POST">
-        {{ form.hidden_tag() }}
+            {{ form.first_name.label }}
+            {{ form.first_name() }}
 
-        {{ form.first_name.label }}
-        {{ form.first_name() }}
+            {{ form.last_name.label }}
+            {{ form.last_name() }}
 
-        {{ form.last_name.label }}
-        {{ form.last_name() }}
+            {{ form.email.label }}
+            {{ form.email() }}
 
-        {{ form.email.label }}
-        {{ form.email() }}
+            {{ form.user_password.label }}
+            {{ form.user_password() }}
 
-        {{ form.user_password.label }}
-        {{ form.user_password() }}
+            {{ form.confirm_password.label }}
+            {{ form.confirm_password() }}
 
-        {{ form.confirm_password.label }}
-        {{ form.confirm_password() }}
-
-        {{ form.submit() }}
-    </form>
+            {{ form.submit() }}
+        </form>
+    </div>
 {% endif %}
 
 
