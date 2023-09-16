@@ -1,8 +1,9 @@
 from scrumsisters import db
+from scrumsisters import UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
 
 
-class Users(db.Model):
+class Users(db.Model, UserMixin):
     """
     Users schema
     """
