@@ -1,5 +1,5 @@
 from flask import render_template, flash
-from forms import UserRegistrationForm
+from forms import UserRegistrationForm, UserSignInForm
 from sqlalchemy import text
 from scrumsisters import app, db, migrate
 from scrumsisters.models import Users, Clubs, Age, Days, Teams
@@ -43,3 +43,9 @@ def register():
         password_hash=user_password,
         form=form
         )
+
+
+@app.route("/signin", methods=["GET", "POST"])
+def user_signin():
+    form = UserSignInForm()
+    return render_template("signin.html", form=form)
