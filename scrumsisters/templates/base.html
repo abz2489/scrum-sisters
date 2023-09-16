@@ -22,7 +22,7 @@
         <li><a href="#">Teams</a></li>
         <li><a href="{{ url_for('register') }}">Register</a></li>
         <li><a href="{{ url_for('user_signin') }}">Sign In</a></li>
-        <li><a href="#">My Account</a></li>
+        <li><a href="{{ url_for('user_profile') }}">Profile</a></li>
         <li><a href="#">Sign Out</a></li>
       </ul>
     </div>
@@ -46,7 +46,7 @@
       <li><a href="#!">Teams</a></li>
       <li><a href="{{ url_for('register') }}">Register</a></li>
       <li><a href="#!">Sign In</a></li>
-      <li><a href="#!">My Account</a></li>
+      <li><a href="{{ url_for('user_profile') }}">Profile</a></li>
       <li><a href="#!">Sign Out</a></li>
     </ul>
   </div>
