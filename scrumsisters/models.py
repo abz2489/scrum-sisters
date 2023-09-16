@@ -10,10 +10,9 @@ class Users(db.Model):
     first_name = db.Column(db.String(50), nullable=False)
     last_name = db.Column(db.String(50), nullable=False)
     email = db.Column(db.String(100), unique=True, nullable=False)
-    club_id = db.Column(db.Integer, db.ForeignKey("clubs.id"), nullable=False)
 
     # Hashed passwords
-    user_password = db.Column(db.String(50))
+    user_password = db.Column(db.String(200))
 
     @property
     def password(self):
@@ -31,7 +30,7 @@ class Users(db.Model):
 
     def __repr__(self):
         # __repr__ to represent itself in the form of a string
-        return self.first_name
+        return '<Name %r>' % self.first_name
 
 
 class Clubs(db.Model):
@@ -42,7 +41,6 @@ class Clubs(db.Model):
     club_name = db.Column(db.String(150), nullable=False)
 
     # relationships
-    users = db.relationship("Users", backref="clubs", uselist=False)
     teams = db.relationship(
         "Teams",
         backref="clubs",
