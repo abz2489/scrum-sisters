@@ -1,8 +1,16 @@
+:root {
+    --grey: #454A49;
+    --black: #1f1f1f;
+    --btn-green: #32E875;
+    --light-text: #ffffff;
+  }
+
 /*BASE.HTML*/
 /* MOBILE TOP BAR */
 #top-logo-bar {
     height: 100px;
     background-color: #1F1F1F;
+    padding-bottom: 15px;
 }
 
 .logo {
@@ -20,3 +28,39 @@ nav#nav-bar.bottom-nav {
     height: 65px;
     background-color: #1F1F1F;
   }
+
+  /*REGISTER.HTML*/
+  .form-container {
+    width: 100%;
+    height: 100%;
+    background-color: var(--grey);
+    color: var(--light-text);
+  }
+
+  .header-container {
+    text-align: center;
+  }
+
+  .header-container > p {
+    font-size: 20px;
+  }
+
+  .form-header {
+    font-size: 42px;
+    margin-top: 20px;
+    padding-top: 25px;
+  }
+
+  form {
+    padding: 15px 0 50px;
+  }
+
+  form#register-form > label {
+    color: var(--light-text);
+    font-weight: bold;
+  }
+
+form#register-form > .btn-container {
+    text-align: center;
+    margin-top: 10px;
+}
