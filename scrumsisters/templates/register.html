@@ -10,7 +10,7 @@
         <p >Create your user account</p>
     </div>
     {% for message in get_flashed_messages() %}
-        <div class="card-panel">{{ message }}</div>
+        <div class="card-panel flash-msg">{{ message }}</div>
     {% endfor %}
     <div class="container">
         <form method="POST" id="register-form">
