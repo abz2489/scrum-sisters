@@ -23,6 +23,9 @@ def register():
     if form.validate_on_submit():
         # Check if user email exists already
         user = Users.query.filter_by(email=form.email.data).first()
+        if user:
+            flash("Email already registered")
+            return redirect(url_for("register"))
         if user is None:
             # Hash password
             password_hash = generate_password_hash(
@@ -35,6 +38,7 @@ def register():
             )
             db.session.add(user)
             db.session.commit()
+        flash("Registration Successful!")
         first_name = form.first_name.data
     return render_template(
         "register.html",
@@ -73,7 +77,7 @@ def user_signin():
 @login_required
 def user_signout():
     logout_user()
-    return render_template('signout.html')
+    return redirect(url_for('user_signin'))
 
 
 @app.route("/profile")
