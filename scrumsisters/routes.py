@@ -1,4 +1,4 @@
-from flask import render_template, flash, redirect, url_for
+from flask import render_template, flash, redirect, url_for, Markup
 from forms import UserRegistrationForm, UserSignInForm
 from sqlalchemy import text
 from scrumsisters import app, db, migrate
@@ -69,7 +69,8 @@ def user_signin():
             else:
                 flash("Wrong email or password")
         else:
-            flash("User doesn't exist, try again or register for an account")
+            flash(Markup("User doesn't exist, \
+            try again or <a href='/register'>register</a> for an account"))
     return render_template("signin.html", form=form)
 
 
