@@ -35,6 +35,7 @@ nav#nav-bar.bottom-nav {
     height: 100%;
     background-color: var(--grey);
     color: var(--light-text);
+    padding-bottom: 50px;
   }
 
   .header-container {
