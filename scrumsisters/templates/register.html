@@ -4,12 +4,16 @@
 {% if first_name %}
     <h1>Hello {{ first_name }}!</h1>
 {% else %}
-    <h2>Register</h2>
+<div class="form-container">
+    <div class="header-container">
+        <h1 class="form-header">Register</h1>
+        <p >Create your user account</p>
+    </div>
     {% for message in get_flashed_messages() %}
-        {{ message }}
+        <div class="card-panel">{{ message }}</div>
     {% endfor %}
     <div class="container">
-        <form method="POST">
+        <form method="POST" id="register-form">
             {{ form.hidden_tag() }}
 
             {{ form.first_name.label }}
@@ -29,11 +33,13 @@
 
             {{ form.confirm_password.label }}
             {{ form.confirm_password() }}
-            
 
-            {{ form.submit() }}
+            <div class="btn-container">
+            {{ form.submit(class="btn btn-submit") }}
+            </div>
         </form>
     </div>
+</div>
 {% endif %}
 
 
