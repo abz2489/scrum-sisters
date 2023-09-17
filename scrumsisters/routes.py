@@ -4,7 +4,7 @@ from sqlalchemy import text
 from scrumsisters import app, db, migrate
 from scrumsisters.models import Users, Clubs, Age, Days, Teams
 from scrumsisters.models import generate_password_hash, check_password_hash
-from scrumsisters import login_manager, login_user
+from scrumsisters import login_manager, login_user, login_required, logout_user
 
 
 @app.route("/")
@@ -69,6 +69,14 @@ def user_signin():
     return render_template("signin.html", form=form)
 
 
+@app.route("/signout", methods=["GET", "POST"])
+@login_required
+def user_signout():
+    logout_user()
+    return render_template('signout.html')
+
+
 @app.route("/profile")
+@login_required
 def user_profile():
     return render_template('profile.html')
