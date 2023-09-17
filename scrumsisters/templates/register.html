@@ -5,6 +5,9 @@
     <h1>Hello {{ first_name }}!</h1>
 {% else %}
     <h2>Register</h2>
+    {% for message in get_flashed_messages() %}
+        {{ message }}
+    {% endfor %}
     <div class="container">
         <form method="POST">
             {{ form.hidden_tag() }}
@@ -19,10 +22,14 @@
             {{ form.email() }}
 
             {{ form.user_password.label }}
+            {% for error in form.user_password.errors %}
+                <span>{{ error }}</span>
+            {% endfor %}
             {{ form.user_password() }}
 
             {{ form.confirm_password.label }}
             {{ form.confirm_password() }}
+            
 
             {{ form.submit() }}
         </form>
