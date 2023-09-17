@@ -65,3 +65,30 @@ form#register-form > .btn-container {
     text-align: center;
     margin-top: 10px;
 }
+
+form#register-form > .btn-container > .btn {
+    background-color: var(--btn-green);
+    color: var(--black);
+}
+
+.flash-msg {
+    color: var(--black);
+    text-align: center;
+}
+
+/*SIGNIN.HTML*/
+
+form#signin-form > label {
+    color: var(--light-text);
+    font-weight: bold;
+}
+
+form#signin-form > .btn-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+form#signin-form > .btn-container > .btn {
+    background-color: var(--btn-green);
+    color: var(--black);
+}
