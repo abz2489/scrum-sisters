@@ -4,7 +4,15 @@ from sqlalchemy import text
 from scrumsisters import app, db, migrate
 from scrumsisters.models import Users, Clubs, Age, Days, Teams
 from scrumsisters.models import generate_password_hash, check_password_hash
-from scrumsisters import login_manager, login_user, login_required, logout_user
+from scrumsisters import (
+    UserMixin,
+    login_user,
+    LoginManager,
+    login_required,
+    logout_user,
+    current_user,
+    login_manager
+)
 
 
 @app.route("/")
@@ -56,7 +64,7 @@ def load_user(user_id):
 
 
 @app.route("/signin", methods=["GET", "POST"])
-def user_signin():
+def login():
     form = UserSignInForm()
     # Validate log in details
     if form.validate_on_submit():
@@ -78,7 +86,7 @@ def user_signin():
 @login_required
 def user_signout():
     logout_user()
-    return redirect(url_for('user_signin'))
+    return redirect(url_for('login'))
 
 
 @app.route("/profile")
