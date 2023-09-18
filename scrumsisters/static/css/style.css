@@ -3,6 +3,8 @@
     --black: #1f1f1f;
     --btn-green: #32E875;
     --light-text: #ffffff;
+    --light-bg: #f5f5f5;
+    --warning: #DB162F;
   }
 
 /*BASE.HTML*/
@@ -91,4 +93,35 @@ form#signin-form > .btn-container {
 form#signin-form > .btn-container > .btn {
     background-color: var(--btn-green);
     color: var(--black);
+}
+
+/*PROFILE.HTML*/
+.form-container.profile {
+    background-color: var(--light-bg);
+    color: var(--black);
+}
+
+.form-container > .label {
+  font-weight: bolder;
+}
+
+table, tr, td {
+  border: none;
+}
+
+td {
+  padding-bottom: 3px;
+}
+
+td:first-child {
+  font-weight: bolder;
+}
+
+.card-panel > .btn-container{
+  text-align: center;
+  padding-top: 15px;
+}
+
+.btn-container > #delete-acc {
+  background-color: var(--warning);
 }
