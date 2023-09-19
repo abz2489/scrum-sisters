@@ -5,32 +5,36 @@
         <h1 class="form-header"> {{ current_user.first_name }}'s Profile</h1>
     </div>
     <div class="container">
-    <div class="card-panel">
-        <table>
-            <tr>
-                <td>First Name:</td>
-                <td>{{ current_user.first_name }}</td>
-            </tr>
-            <tr>
-                <td>Last Name:</td>
-                <td>{{ current_user.last_name }}</td>
-            </tr>
-            <tr>
-                <td>Email:</td>
-                <td>{{ current_user.email }}</td>
-            </tr>
-        </table>
-        <div class="btn-container">
-            <a class="btn" id="delete-acc">Delete Account</a>
+        <div class="card-panel" id="profile-panel">
+            <table>
+                <tr>
+                    <td>First Name:</td>
+                    <td>{{ current_user.first_name }}</td>
+                </tr>
+                <tr>
+                    <td>Last Name:</td>
+                    <td>{{ current_user.last_name }}</td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td>{{ current_user.email }}</td>
+                </tr>
+            </table>
+            <div class="btn-container">
+                <a class="btn" id="delete-acc">Delete Account</a>
+            </div>
         </div>
     </div>
 </div>
 
-</div>
 
-<div>
+<div class="form-container">
     <div class="header-container">
-        <h2 class="form-header"> My Club</h2>
+        <h2 class="form-header club"> My Club</h2>
+    </div>
+    <div class="container">
+        <div class="square">
+        </div>
     </div>
 </div>
 
