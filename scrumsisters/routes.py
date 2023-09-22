@@ -20,6 +20,11 @@ def home():
     return render_template("base.html")
 
 
+@app.route("/teams")
+def teams():
+    return render_template("teams.html")
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     first_name = None
