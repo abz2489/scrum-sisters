@@ -19,7 +19,7 @@
           src="{{ url_for('static', filename='images/ss-logo.png')}}"></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Home</a></li>
-        <li><a href="#">Teams</a></li>
+        <li><a href="{{ url_for('teams') }}">Teams</a></li>
         
         {% if current_user.is_authenticated %}
         <li><a href="{{ url_for('user_profile') }}">Profile</a></li>
@@ -47,7 +47,7 @@
     <!-- Mobile Sidenav -->
     <ul id='mobile-menu' class='sidenav'>
       <li><a href="#!">Home</a></li>
-      <li><a href="#!">Teams</a></li>
+      <li><a href="{{ url_for('teams') }}">Teams</a></li>
       
       {% if current_user.is_authenticated %}
         <li><a href="{{ url_for('user_profile') }}">Profile</a></li>
