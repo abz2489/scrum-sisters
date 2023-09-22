@@ -11,6 +11,7 @@ class Users(db.Model, UserMixin):
     first_name = db.Column(db.String(50), nullable=False)
     last_name = db.Column(db.String(50), nullable=False)
     email = db.Column(db.String(100), unique=True, nullable=False)
+    club_id = db.Column(db.Integer, db.ForeignKey("clubs.id"), nullable=False)
 
     # Hashed passwords
     user_password = db.Column(db.String(200))
@@ -42,6 +43,7 @@ class Clubs(db.Model):
     club_name = db.Column(db.String(150), nullable=False)
 
     # relationships
+    users = db.relationship("Users", backref="clubs", uselist=False)
     teams = db.relationship(
         "Teams",
         backref="clubs",
