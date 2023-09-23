@@ -145,7 +145,8 @@ td:first-child {
 .container > .my-club {
   text-align: center;
 }
-.square {
+
+.clubs-square {
   width: 200px;
   height: 200px;
   margin: auto;
@@ -156,6 +157,10 @@ td:first-child {
 }
 
 
+/*TEAMS.HTML*/
+
+
+
 /*MEDIA QUERIES*/
 
 @media only screen and (min-width: 768px) {
@@ -164,7 +169,7 @@ td:first-child {
     width: 70%;
   }
 
-  .square {
+  .clubs-square {
     width: 300px;
     height: 300px;
   }
