@@ -4,12 +4,9 @@ from wtforms import (
     PasswordField,
     EmailField,
     SelectField,
-    SelectMultipleField,
     SubmitField
     )
 from wtforms.validators import DataRequired, EqualTo
-from wtforms_sqlalchemy.fields import QuerySelectField
-# from scrumsisters.models import clubs_list
 
 
 # User registration form class
@@ -17,6 +14,7 @@ class UserRegistrationForm(FlaskForm):
     first_name = StringField("First Name", validators=[DataRequired()])
     last_name = StringField("Last Name", validators=[DataRequired()])
     email = StringField("Email", validators=[DataRequired()])
+    club = SelectField("Clubs", coerce=int)
     user_password = PasswordField(
         'Password', validators=[DataRequired(), EqualTo(
             'confirm_password', message="Passwords do not match!")])
