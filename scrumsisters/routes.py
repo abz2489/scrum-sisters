@@ -27,11 +27,13 @@ def teams():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    form = UserRegistrationForm()
     first_name = None
     last_name = None
     email = None
     user_password = None
-    form = UserRegistrationForm()
+    club = [(club.id, club.club_name) for club in Clubs.query.all()]
+    form.club.choices = club
     # form validation
     if form.validate_on_submit():
         # Check if user email exists already
@@ -47,7 +49,8 @@ def register():
                 first_name=form.first_name.data,
                 last_name=form.last_name.data,
                 email=form.email.data,
-                user_password=password_hash
+                user_password=password_hash,
+                club_id=form.club.data,
             )
             db.session.add(user)
             db.session.commit()
