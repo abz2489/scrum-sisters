@@ -24,7 +24,7 @@
 
             {{ form.email.label }}
             {{ form.email() }}
-
+            
             {{ form.user_password.label }}
             {% for error in form.user_password.errors %}
                 <span>{{ error }}</span>
@@ -33,6 +33,9 @@
 
             {{ form.confirm_password.label }}
             {{ form.confirm_password() }}
+
+            {{ form.club.label }}
+            {{ form.club(class="input-field col s12") }}
 
             <div class="btn-container">
             {{ form.submit(class="btn btn-submit") }}
