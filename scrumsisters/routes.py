@@ -101,3 +101,9 @@ def user_signout():
 @login_required
 def user_profile():
     return render_template('profile.html')
+
+
+@app.route("/edit_user_profile/<user_id>", methods=["GET", "POST"])
+@login_required
+def edit_user_profile(user_id):
+    return render_template("edit_user_profile.html")
