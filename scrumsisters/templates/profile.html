@@ -6,7 +6,9 @@
     </div>
     <div class="container">
         <div class="card-panel" id="profile-panel">
-            <i class="small material-symbols-outlined tooltipped" data-position="left" data-tooltip="Edit Profile" id="edit">edit</i>
+            <a href="{{ url_for('edit_user_profile', user_id=current_user.id) }}">
+                <i class="small material-symbols-outlined tooltipped" data-position="left" data-tooltip="Edit Profile" id="edit">edit</i>
+            </a>
             <table>
                 <tr>
                     <td>First Name:</td>
