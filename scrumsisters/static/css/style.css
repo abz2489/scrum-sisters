@@ -152,8 +152,15 @@ td:first-child {
   margin: auto;
   border: 10px;
   background-color: var(--square);
-  opacity: 50%;
+  opacity: 80%;
   border-radius: 10%;
+}
+
+.user_club {
+  margin: auto;
+  color: var(--light-text);
+  font-size: 30px;
+  text-align: center;
 }
 
 
