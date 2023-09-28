@@ -107,6 +107,17 @@ form#signin-form > .btn-container > .btn {
   font-weight: bolder;
 }
 
+#profile-panel.card-panel {
+  position: relative;
+}
+
+#edit.material-symbols-outlined {
+  position: absolute;
+  font-size: 25px;
+  top: 8px;
+  right: 5px;
+}
+
 table, tr, td {
   border: none;
 }
