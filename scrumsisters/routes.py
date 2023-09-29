@@ -109,22 +109,22 @@ def user_profile():
 def edit_user_profile(user_id):
     user_id = Users.query.get_or_404(user_id)
     form = UserRegistrationForm()
+    club = [(club.id, club.club_name) for club in Clubs.query.all()]
+    form.club.choices = club
     if form.validate_on_submit():
-        user = Users.query.filter_by(email=form.email.data).first()
-        if user:
-            flash("Email already registered")
-            return redirect(
-                url_for("edit_user_profile", user_id=current_user.id))
-        if user is None:
-            # Hash password
-            password_hash = generate_password_hash(
-                form.user_password.data, method="scrypt")
-            current_user.first_name = form.first_name.data
-            current_user.last_name = form.last_name.data
-            current_user.email = form.email.data
-            current_user.user_password = password_hash
-            current_user.club_id = form.club.data
-            db.session.add(user)
-            db.session.commit()
+        # Hash password
+        password_hash = generate_password_hash(
+            form.user_password.data, method="scrypt")
+        current_user.first_name = form.first_name.data
+        current_user.last_name = form.last_name.data
+        current_user.email = form.email.data
+        current_user.user_password = password_hash
+        current_user.club_id = form.club.data
+        db.session.add(user_id)
+        db.session.commit()
         flash("User Details Changed Successfully!")
+    form.first_name.data = current_user.first_name
+    form.last_name.data = current_user.last_name
+    form.email.data = current_user.email
+    form.club.data = current_user.club_id 
     return render_template('edit_user_profile.html', form=form)
