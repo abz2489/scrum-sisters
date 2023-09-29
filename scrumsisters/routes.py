@@ -126,5 +126,14 @@ def edit_user_profile(user_id):
     form.first_name.data = current_user.first_name
     form.last_name.data = current_user.last_name
     form.email.data = current_user.email
-    form.club.data = current_user.club_id 
+    form.club.data = current_user.club_id
     return render_template('edit_user_profile.html', form=form)
+
+
+@app.route("/delete_user/<user_id>")
+@login_required
+def delete_user(user_id):
+    user = Users.query.get_or_404(user_id)
+    db.session.delete(user)
+    db.session.commit()
+    return redirect(url_for('register'))
