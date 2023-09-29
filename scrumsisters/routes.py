@@ -76,6 +76,7 @@ def login():
     form = UserSignInForm()
     # Validate log in details
     if form.validate_on_submit():
+        # Check if user email exists already
         user = Users.query.filter_by(email=form.email.data).first()
         if user:
             # Check password hash
@@ -106,4 +107,24 @@ def user_profile():
 @app.route("/edit_user_profile/<user_id>", methods=["GET", "POST"])
 @login_required
 def edit_user_profile(user_id):
-    return render_template("edit_user_profile.html")
+    user_id = Users.query.get_or_404(user_id)
+    form = UserRegistrationForm()
+    if form.validate_on_submit():
+        user = Users.query.filter_by(email=form.email.data).first()
+        if user:
+            flash("Email already registered")
+            return redirect(
+                url_for("edit_user_profile", user_id=current_user.id))
+        if user is None:
+            # Hash password
+            password_hash = generate_password_hash(
+                form.user_password.data, method="scrypt")
+            current_user.first_name = form.first_name.data
+            current_user.last_name = form.last_name.data
+            current_user.email = form.email.data
+            current_user.user_password = password_hash
+            current_user.club_id = form.club.data
+            db.session.add(user)
+            db.session.commit()
+        flash("User Details Changed Successfully!")
+    return render_template('edit_user_profile.html', form=form)
