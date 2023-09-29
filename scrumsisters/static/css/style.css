@@ -144,6 +144,14 @@ td:first-child {
   background-color: var(--warning);
 }
 
+.yes-btn {
+  background-color: var(--btn-green)
+}
+
+.no-btn {
+  background-color: var(--warning);
+}
+
 .form-header.club {
   margin-top: 0;
 }
