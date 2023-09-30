@@ -151,6 +151,8 @@ def club_page(club_id):
 def add_team(user_club_id):
     form = AddTeamForm()
     club = [(club.id, club.club_name) for club in Clubs.query.all()]
+    age_group = [(group.id, group.age_group) for group in Age.query.all()]
     form.club.choices = club
+    form.age_group.choices = age_group
     form.club.data = current_user.club_id
     return render_template('add_team.html', form=form)
