@@ -7,7 +7,7 @@ from wtforms import (
     SelectMultipleField,
     SubmitField,
     URLField,
-    TimeField
+    TimeField,
     )
 from wtforms.validators import DataRequired, EqualTo
 
@@ -40,7 +40,7 @@ class AddTeamForm(FlaskForm):
     age_group = SelectField("Age Group", coerce=int)
     training_days = SelectMultipleField("Training Days", coerce=int)
     training_time = TimeField('Training Time', validators=[DataRequired()])
-    training_location = TextField(
+    training_location = StringField(
         'Training Location', validators=[DataRequired()])
     fb_url = URLField("Facebook URL")
     tiktok_url = URLField("TikTok URL")
