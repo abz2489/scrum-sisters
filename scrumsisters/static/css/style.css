@@ -229,6 +229,11 @@ td:first-child {
   opacity: 70%;
   z-index: 1;
 }
+
+/*ADD_TEAMS.HTML*/
+.select-wrapper+label {
+  position:inherit;
+}
 /*TEAMS.HTML*/
 
 
