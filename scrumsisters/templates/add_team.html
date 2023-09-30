@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="form-container">
+    <div class="header-container">
+        <h1 class="form-header">Add Team</h1>
+        <p >Fill out the form below to add your team to {{ current_user.clubs }}'s Teams</p>
+    </div>
+    {% for message in get_flashed_messages() %}
+        <div class="card-panel flash-msg">{{ message }}</div>
+    {% endfor %}
+    <div class="container">
+        <form method="POST" id="register-form">
+            {{ form.hidden_tag() }}
+
+            {{ form.team_name.label }}
+            {{ form.team_name() }}
+
+            {{ form.club.label }}
+            {{ form.club(class="input-field disabled col s12") }}
+
+            {{ form.age_group.label }}
+            {{ form.age_group(class="input-field col s12") }}
+            
+            {{ form.training_days.label }}
+            {{ form.training_days(class="input-field col s12") }}
+
+            {{ form.training_location.label }}
+            {{ form.training_location() }}
+
+            {{ form.fb_url.label }}
+            {{ form.fb_url() }}
+
+            {{ form.tiktok_url.label }}
+            {{ form.tiktok_url() }}
+
+            {{ form.insta_url.label }}
+            {{ form.insta_url() }}
+
+            <div class="btn-container">
+                {{ form.submit(class="btn btn-submit") }}
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
