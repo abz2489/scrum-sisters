@@ -234,6 +234,10 @@ td:first-child {
 .select-wrapper+label {
   position:inherit;
 }
+
+.dropdown-trigger {
+  color: var(--light-text);
+}
 /*TEAMS.HTML*/
 
 
