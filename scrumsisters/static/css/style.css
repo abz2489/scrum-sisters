@@ -191,14 +191,13 @@ td:first-child {
   display: grid;
   grid-template: repeat(3, 150px);
   justify-items: center;
-  grid-gap: 15px;
 }
 
 .team1, .team2, .add-team {
   width: 200px;
   height: 200px;
   background-color: var(--square);
-  border-radius: 10%
+  border-radius: 10%;
 }
 
 .team1 {
@@ -250,5 +249,35 @@ td:first-child {
   /*PROFILE.HTML*/
   .card-panel#profile-panel {
     width: 50%;
+  }
+
+  /*CLUB_PAGE.HTML*/
+  .grid-container {
+    justify-content: center;
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+
+  .team1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  
+  .team2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  
+  .add-team {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding: 65px 0;
+    text-align: center;
   }
 }
