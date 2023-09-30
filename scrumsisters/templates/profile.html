@@ -48,7 +48,7 @@
     </div>
     <div class="container">
         <div class="clubs-square valign-wrapper">
-            <a class="user_club">{{ current_user.clubs }}</a>
+            <a href="{{ url_for('club_page', user_id=current_user.id) }}" class="user_club">{{ current_user.clubs }}</a>
         </div>
     </div>
 </div>
