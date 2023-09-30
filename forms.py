@@ -4,6 +4,7 @@ from wtforms import (
     PasswordField,
     EmailField,
     SelectField,
+    SelectMultipleField,
     SubmitField,
     URLField,
     TimeField
@@ -37,7 +38,7 @@ class AddTeamForm(FlaskForm):
     team_name = StringField("First Name", validators=[DataRequired()])
     club = SelectField("Club", coerce=int)
     age_group = SelectField("Age Group", coerce=int)
-    training_days = SelectField("Training Days", coerce=int)
+    training_days = SelectMultipleField("Training Days", coerce=int)
     training_time = TimeField('Training Time', validators=[DataRequired()])
     training_location = TextField(
         'Training Location', validators=[DataRequired()])
