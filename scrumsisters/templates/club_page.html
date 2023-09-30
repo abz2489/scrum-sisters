@@ -13,7 +13,7 @@
             <a href="#"></a>
         </div>
         <div class="add-team">
-            <a href="#" class="btn-floating btn-large" id="add-bg">
+            <a href="{{ url_for('add_team', user_club_id=current_user.club_id) }}" class="btn-floating btn-large" id="add-bg">
                 <i class="large material-symbols-outlined" id="add">add</i>
             </a>
             <p>Add Team</p>
