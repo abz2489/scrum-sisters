@@ -186,6 +186,45 @@ td:first-child {
 }
 
 
+/*CLUB_PAGE.HTML*/
+.grid-container {
+  display: grid;
+  grid-template: repeat(3, 150px);
+  justify-items: center;
+  grid-gap: 15px;
+}
+
+.team1, .team2, .add-team {
+  width: 200px;
+  height: 200px;
+  background-color: var(--square);
+  border-radius: 10%
+}
+
+.team1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.team2 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.add-team {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 3;
+}
+
+#add-bg.btn-floating.btn-large {
+  background-color: var(--btn-green);
+}
 /*TEAMS.HTML*/
 
 
