@@ -256,7 +256,7 @@ td:first-child {
   /*CLUB_PAGE.HTML*/
   .grid-container {
     justify-content: center;
-    column-gap: 20px;
+    column-gap: 50px;
     row-gap: 20px;
   }
 
