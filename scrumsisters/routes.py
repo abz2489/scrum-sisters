@@ -1,5 +1,5 @@
 from flask import render_template, flash, redirect, url_for, Markup
-from forms import UserRegistrationForm, UserSignInForm
+from forms import UserRegistrationForm, UserSignInForm, AddTeamForm
 from sqlalchemy import text
 from scrumsisters import app, db, migrate
 from scrumsisters.models import Users, Clubs, Age, Days, Teams
@@ -139,15 +139,15 @@ def delete_user(user_id):
     return redirect(url_for('register'))
 
 
-@app.route("/club_page/<user_id>")
+@app.route("/club_page/<club_id>")
 @login_required
-def club_page(user_id):
-    user = Users.query.get_or_404(user_id)
+def club_page(club_id):
+    club = Clubs.query.get_or_404(club_id)
     return render_template('club_page.html')
 
 
-@app.route("/add_team/<user_id>")
+@app.route("/add_team/<user_club_id>")
 @login_required
-def club_page(user_id):
-    user = Users.query.get_or_404(user_id)
+def add_team(user_club_id):
+    form = AddTeamForm
     return render_template('add_team.html')
