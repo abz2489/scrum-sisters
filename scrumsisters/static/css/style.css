@@ -116,6 +116,7 @@ form#signin-form > .btn-container > .btn {
   font-size: 25px;
   top: 8px;
   right: 5px;
+  color: var(--black);
 }
 
 table, tr, td {
