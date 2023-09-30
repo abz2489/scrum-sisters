@@ -220,10 +220,13 @@ td:first-child {
   grid-column-end: 2;
   grid-row-start: 3;
   grid-row-end: 3;
+  padding: 65px 0;
+  text-align: center;
 }
 
 #add-bg.btn-floating.btn-large {
   background-color: var(--btn-green);
+  opacity: 70%;
 }
 /*TEAMS.HTML*/
 
