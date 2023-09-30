@@ -4,7 +4,9 @@ from wtforms import (
     PasswordField,
     EmailField,
     SelectField,
-    SubmitField
+    SubmitField,
+    URLField,
+    TimeField
     )
 from wtforms.validators import DataRequired, EqualTo
 
@@ -27,4 +29,19 @@ class UserRegistrationForm(FlaskForm):
 class UserSignInForm(FlaskForm):
     email = StringField("Email", validators=[DataRequired()])
     password = PasswordField("Password", validators=[DataRequired()])
+    submit = SubmitField("Submit")
+
+
+# Add team form class
+class AddTeamForm(FlaskForm):
+    team_name = StringField("First Name", validators=[DataRequired()])
+    club = SelectField("Club", coerce=int)
+    age_group = SelectField("Age Group", coerce=int)
+    training_days = SelectField("Training Days", coerce=int)
+    training_time = TimeField('Training Time', validators=[DataRequired()])
+    training_location = TextField(
+        'Training Location', validators=[DataRequired()])
+    fb_url = URLField("Facebook URL")
+    tiktok_url = URLField("TikTok URL")
+    insta_url = URLField("TikTok URL")
     submit = SubmitField("Submit")
