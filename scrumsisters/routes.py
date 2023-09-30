@@ -146,8 +146,8 @@ def club_page(club_id):
     return render_template('club_page.html')
 
 
-@app.route("/add_team/<user_club_id>")
+@app.route("/add_team/<user_club_id>", methods=["GET", "POST"])
 @login_required
 def add_team(user_club_id):
-    form = AddTeamForm
-    return render_template('add_team.html')
+    form = AddTeamForm()
+    return render_template('add_team.html', form=form)
