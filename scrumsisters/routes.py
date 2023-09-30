@@ -150,4 +150,7 @@ def club_page(club_id):
 @login_required
 def add_team(user_club_id):
     form = AddTeamForm()
+    club = [(club.id, club.club_name) for club in Clubs.query.all()]
+    form.club.choices = club
+    form.club.data = current_user.club_id
     return render_template('add_team.html', form=form)
