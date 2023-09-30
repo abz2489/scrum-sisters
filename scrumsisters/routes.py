@@ -144,3 +144,10 @@ def delete_user(user_id):
 def club_page(user_id):
     user = Users.query.get_or_404(user_id)
     return render_template('club_page.html')
+
+
+@app.route("/add_team/<user_id>")
+@login_required
+def club_page(user_id):
+    user = Users.query.get_or_404(user_id)
+    return render_template('add_team.html')
