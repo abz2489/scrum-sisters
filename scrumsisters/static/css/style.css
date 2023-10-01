@@ -235,7 +235,7 @@ td:first-child {
   position:inherit;
 }
 
-.dropdown-trigger {
+.dropdown-trigger, input {
   color: var(--light-text);
 }
 /*TEAMS.HTML*/
