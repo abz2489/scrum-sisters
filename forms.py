@@ -9,7 +9,13 @@ from wtforms import (
     URLField,
     TimeField,
     )
-from wtforms.validators import DataRequired, EqualTo
+from wtforms.validators import (
+    DataRequired,
+    EqualTo,
+    Optional,
+    URL,
+    InputRequired
+    )
 
 
 # User registration form class
@@ -38,11 +44,21 @@ class AddTeamForm(FlaskForm):
     team_name = StringField("Team Name", validators=[DataRequired()])
     club = SelectField("Club", coerce=int)
     age_group = SelectField("Age Group", coerce=int)
-    training_days = SelectMultipleField("Training Days", coerce=int)
-    training_time = TimeField('Training Time', validators=[DataRequired()])
+    training_days = SelectMultipleField(
+        "Training Days", coerce=int, validators=[InputRequired()])
+    training_time = StringField('Training Time', validators=[DataRequired()])
     training_location = StringField(
         'Training Location', validators=[DataRequired()])
-    fb_url = URLField("Facebook URL")
-    tiktok_url = URLField("TikTok URL")
-    insta_url = URLField("TikTok URL")
+    fb_url = URLField(
+        "Facebook URL", validators=[
+            Optional(),
+            URL(require_tld=False, message="Valid URL required!")])
+    tiktok_url = URLField(
+        "TikTok URL", validators=[
+            Optional(),
+            URL(require_tld=False, message="Valid URL required!")])
+    insta_url = URLField(
+        "TikTok URL", validators=[
+            Optional(),
+            URL(require_tld=False, message="Valid URL required!")])
     submit = SubmitField("Submit")
