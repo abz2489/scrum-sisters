@@ -58,7 +58,8 @@ class AddTeamForm(FlaskForm):
             Optional(),
             URL(require_tld=False, message="Valid URL required!")])
     insta_url = URLField(
-        "TikTok URL", validators=[
+        "Instagram URL", validators=[
             Optional(),
             URL(require_tld=False, message="Valid URL required!")])
+    user_id = StringField("User", validators=[DataRequired()])
     submit = SubmitField("Submit")
