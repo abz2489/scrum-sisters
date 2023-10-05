@@ -17,7 +17,7 @@
             {{ form.team_name() }}
 
             {{ form.club.label }}
-            {{ form.club(class="input-field disabled col s12") }}
+            {{ form.club(class="input-field disabled col s12", disabled=True) }}
 
             {{ form.age_group.label }}
             {{ form.age_group(class="input-field col s12") }}
@@ -39,6 +39,9 @@
 
             {{ form.insta_url.label }}
             {{ form.insta_url() }}
+
+            {{ form.user_id.label }}
+            {{ form.user_id(disabled=True) }}
 
             <div class="btn-container">
                 {{ form.submit(class="btn btn-submit") }}
