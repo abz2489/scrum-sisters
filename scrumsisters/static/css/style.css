@@ -178,7 +178,7 @@ td:first-child {
   border-radius: 10%;
 }
 
-.user_club {
+.user_clubs_teams {
   margin: auto;
   color: var(--light-text);
   font-size: 30px;
@@ -199,6 +199,7 @@ td:first-child {
   height: 200px;
   background-color: var(--square);
   border-radius: 10%;
+  color: var(--light-text);
 }
 
 .team1 {
