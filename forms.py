@@ -23,7 +23,7 @@ class UserRegistrationForm(FlaskForm):
     first_name = StringField("First Name", validators=[DataRequired()])
     last_name = StringField("Last Name", validators=[DataRequired()])
     email = StringField("Email", validators=[DataRequired()])
-    club = SelectField("Clubs", coerce=int)
+    club = SelectField("Clubs", coerce=int, validators=[DataRequired()])
     user_password = PasswordField(
         'Password', validators=[DataRequired(), EqualTo(
             'confirm_password', message="Passwords do not match!")])
@@ -42,13 +42,14 @@ class UserSignInForm(FlaskForm):
 # Add team form class
 class AddTeamForm(FlaskForm):
     team_name = StringField("Team Name", validators=[DataRequired()])
-    club = SelectField("Club", coerce=int)
-    age_group = SelectField("Age Group", coerce=int)
+    club = SelectField("Club", coerce=int, validators=[DataRequired()])
+    age_group = SelectField(
+        "Age Group", coerce=int, validators=[DataRequired()])
     training_day1 = SelectField(
         "Training Day 1", coerce=int, validators=[InputRequired()])
     training_day2 = SelectField(
         "Training Day 2", coerce=int)
-    training_time = StringField('Training Time', validators=[DataRequired()])
+    training_time = StringField('Training Time')
     training_location = StringField(
         'Training Location', validators=[DataRequired()])
     fb_url = URLField(
