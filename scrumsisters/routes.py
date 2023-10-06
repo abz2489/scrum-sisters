@@ -184,3 +184,10 @@ def add_team(user_club_id):
             db.session.add(team)
             db.session.commit()
     return render_template('add_team.html', form=form)
+
+
+@app.route("/team_profile/<team_club>")
+@login_required
+def team_profile(team_club):
+    team = Teams.query.get_or_404(team_club)
+    return render_template('team_profile.html')
