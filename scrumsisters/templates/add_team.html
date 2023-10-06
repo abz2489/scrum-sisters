@@ -17,30 +17,39 @@
             {{ form.team_name() }}
 
             {{ form.club.label }}
-            {{ form.club(class="input-field disabled col s12", disabled=True) }}
+            {{ form.club(disabled=True) }}
 
             {{ form.age_group.label }}
-            {{ form.age_group(class="input-field col s12") }}
+            {{ form.age_group() }}
             
             {{ form.training_day1.label }}
-            {{ form.training_day1(class="input-field col s12") }}
+            {{ form.training_day1() }}
 
             {{ form.training_day2.label }}
-            {{ form.training_day2(class="input-field col s12") }}
+            {{ form.training_day2() }}
 
             {{ form.training_time.label }}
-            {{ form.training_time(class="input-field col s12 timepicker") }}
+            {{ form.training_time(class="timepicker") }}
 
             {{ form.training_location.label }}
             {{ form.training_location() }}
 
             {{ form.fb_url.label }}
+                {% for error in form.fb_url.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
             {{ form.fb_url() }}
 
             {{ form.tiktok_url.label }}
+                {% for error in form.tiktok_url.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
             {{ form.tiktok_url() }}
 
             {{ form.insta_url.label }}
+                {% for error in form.insta_url.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
             {{ form.insta_url() }}
 
             {{ form.user_id.label }}
