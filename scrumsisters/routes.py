@@ -152,9 +152,35 @@ def add_team(user_club_id):
     form = AddTeamForm()
     club = [(club.id, club.club_name) for club in Clubs.query.all()]
     age_group = [(group.id, group.age_group) for group in Age.query.all()]
-    training_days = [(day.id, day.day) for day in Days.query.all()]
+    training_day1 = [(day.id, day.day) for day in Days.query.all()]
+    training_day2 = [(day.id, day.day) for day in Days.query.all()]
     form.club.choices = club
     form.age_group.choices = age_group
-    form.training_days.choices = training_days
+    form.training_day1.choices = training_day1
+    form.training_day2.choices = training_day2
     form.club.data = current_user.club_id
+    form.user_id.data = current_user.id
+    # form validation
+    if form.validate_on_submit():
+        # Check if team name exists already
+        team = Teams.query.filter_by(team_name=form.team_name.data).first()
+        if team:
+            flash("Team already exists")
+            return redirect(url_for("add_team"))
+        if team is None:
+            team = Teams(
+                team_name=form.team_name.data,
+                club_id=form.club.data,
+                age_group_id=form.age_group.data,
+                training_day1=form.training_day1.data,
+                training_day2=form.training_day2.data,
+                training_time=form.training_time.data,
+                training_location=form.training_location.data,
+                fb_url=form.fb_url.data,
+                tiktok_url=form.tiktok_url.data,
+                insta_url=form.insta_url.data,
+                users_id=form.user_id.data
+            )
+            db.session.add(team)
+            db.session.commit()
     return render_template('add_team.html', form=form)
