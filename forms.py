@@ -44,8 +44,10 @@ class AddTeamForm(FlaskForm):
     team_name = StringField("Team Name", validators=[DataRequired()])
     club = SelectField("Club", coerce=int)
     age_group = SelectField("Age Group", coerce=int)
-    training_days = SelectMultipleField(
-        "Training Days", coerce=int, validators=[InputRequired()])
+    training_day1 = SelectField(
+        "Training Day 1", coerce=int, validators=[InputRequired()])
+    training_day2 = SelectField(
+        "Training Day 2", coerce=int)
     training_time = StringField('Training Time', validators=[DataRequired()])
     training_location = StringField(
         'Training Location', validators=[DataRequired()])
