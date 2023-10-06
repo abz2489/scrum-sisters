@@ -79,7 +79,11 @@ class Days(db.Model):
     day = db.Column(db.String, nullable=False)
 
     # relationships
-    teams = db.relationship("Teams", backref="days", lazy=True)
+    teams = db.relationship(
+        "Teams",
+        primaryjoin="Days.id==Teams.training_day1",
+        backref="days",
+        lazy=True)
 
     def __repr__(self):
         # __repr__ to represent itself in the form of a string
@@ -95,7 +99,9 @@ class Teams(db.Model):
     club_id = db.Column(db.Integer, db.ForeignKey("clubs.id"), nullable=False)
     age_group_id = db.Column(
         db.Integer, db.ForeignKey("age.id"), nullable=False)
-    days_id = db.Column(db.Integer, db.ForeignKey(
+    training_day1 = db.Column(db.Integer, db.ForeignKey(
+        "days.id"), nullable=False)
+    training_day2 = db.Column(db.Integer, db.ForeignKey(
         "days.id"), nullable=False)
     training_time = db.Column(db.Time, nullable=False)
     training_location = db.Column(db.Text, nullable=False)
