@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="form-container">
+    <div class="header-container">
+        <h1 class="form-header">Add Team</h1>
+        <p >Fill out the form below to add your team to {{ current_user.clubs }}'s Teams</p>
+    </div>
+    {% for message in get_flashed_messages() %}
+        <div class="card-panel flash-msg">{{ message }}</div>
+    {% endfor %}
+    <div class="container">
+        <form method="POST" id="register-form">
+            {{ form.hidden_tag() }}
+
+            {{ form.team_name.label }}
+            {{ form.team_name() }}
+
+            {{ form.club.label }}
+            {{ form.club(disabled=True) }}
+
+            {{ form.age_group.label }}
+            {{ form.age_group() }}
+            
+            {{ form.training_day1.label }}
+            {{ form.training_day1() }}
+
+            {{ form.training_day2.label }}
+            {{ form.training_day2() }}
+
+            {{ form.training_time.label }}
+            {{ form.training_time(class="timepicker") }}
+
+            {{ form.training_location.label }}
+            {{ form.training_location() }}
+
+            {{ form.fb_url.label }}
+                {% for error in form.fb_url.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            {{ form.fb_url() }}
+
+            {{ form.tiktok_url.label }}
+                {% for error in form.tiktok_url.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            {{ form.tiktok_url() }}
+
+            {{ form.insta_url.label }}
+                {% for error in form.insta_url.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            {{ form.insta_url() }}
+
+            {{ form.user_id.label }}
+            {{ form.user_id(disabled=True) }}
+
+            <div class="btn-container">
+                {{ form.submit(class="btn btn-submit") }}
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
