@@ -191,3 +191,46 @@ def add_team(user_club_id):
 def team_profile(team_club):
     team = Teams.query.get_or_404(team_club)
     return render_template('team_profile.html')
+
+
+@app.route("/edit_team_profile/<team_id>", methods=["GET", "POST"])
+@login_required
+def edit_team_profile(team_id):
+    team_id = Teams.query.get_or_404(team_id)
+    form = AddTeamForm()
+    club = [(club.id, club.club_name) for club in Clubs.query.all()]
+    age_group = [(group.id, group.age_group) for group in Age.query.all()]
+    training_day1 = [(day.id, day.day) for day in Days.query.all()]
+    training_day2 = [(day.id, day.day) for day in Days.query.all()]
+    form.club.choices = club
+    form.age_group.choices = age_group
+    form.training_day1.choices = training_day1
+    form.training_day2.choices = training_day2
+    form.club.data = current_user.club_id
+    form.user_id.data = current_user.id
+    for team in current_user.teams:
+        if form.validate_on_submit():
+            team.team_name = form.team_name.data
+            team.club_id = form.club.data
+            team.age_group_id = form.age_group.data
+            team.training_day1 = form.training_day1.data
+            team.training_day2 = form.training_day2.data
+            team.training_time = form.training_time.data
+            team.training_location = form.training_location.data
+            team.fb_url = form.fb_url.data
+            team.tiktok_url = form.tiktok_url.data
+            team.insta_url = form.insta_url.data
+            db.session.add(team_id)
+            db.session.commit()
+            flash("Team Details Changed Successfully!")
+        form.team_name.data = team.team_name
+        form.club.data = team.club_id
+        form.age_group.data = team.age_group_id
+        form.training_day1.data = team.training_day1
+        form.training_day2.data = team.training_day2
+        form.training_time.data = team.training_time
+        form.training_location.data = team.training_location
+        form.fb_url.data = team.fb_url
+        form.tiktok_url.data = team.tiktok_url
+        form.insta_url.data = team.insta_url
+        return render_template('edit_team_profile.html', form=form)
