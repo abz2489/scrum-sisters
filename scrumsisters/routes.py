@@ -196,7 +196,7 @@ def team_profile(team_club):
 @app.route("/edit_team_profile/<team_id>", methods=["GET", "POST"])
 @login_required
 def edit_team_profile(team_id):
-    team_id = Teams.query.get_or_404(team_id)
+    team = Teams.query.get_or_404(team_id)
     form = AddTeamForm()
     club = [(club.id, club.club_name) for club in Clubs.query.all()]
     age_group = [(group.id, group.age_group) for group in Age.query.all()]
@@ -220,7 +220,7 @@ def edit_team_profile(team_id):
             team.fb_url = form.fb_url.data
             team.tiktok_url = form.tiktok_url.data
             team.insta_url = form.insta_url.data
-            db.session.add(team_id)
+            db.session.add(team)
             db.session.commit()
             flash("Team Details Changed Successfully!")
         form.team_name.data = team.team_name
@@ -234,3 +234,12 @@ def edit_team_profile(team_id):
         form.tiktok_url.data = team.tiktok_url
         form.insta_url.data = team.insta_url
         return render_template('edit_team_profile.html', form=form)
+
+
+@app.route("/delete_team/<team_id>")
+@login_required
+def delete_team(team_id):
+    team = Teams.query.get_or_404(team_id)
+    db.session.delete(team)
+    db.session.commit()
+    return redirect(url_for('club_page', club_id=current_user.club_id))
