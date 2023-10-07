@@ -79,10 +79,15 @@ class Days(db.Model):
     day = db.Column(db.String, nullable=False)
 
     # relationships
-    teams = db.relationship(
+    day1 = db.relationship(
         "Teams",
         primaryjoin="Days.id==Teams.training_day1",
-        backref="days",
+        backref="day1",
+        lazy=True)
+    day2 = db.relationship(
+        "Teams",
+        primaryjoin="Days.id==Teams.training_day2",
+        backref="day2",
         lazy=True)
 
     def __repr__(self):
