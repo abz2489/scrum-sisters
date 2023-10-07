@@ -239,6 +239,21 @@ td:first-child {
 .dropdown-trigger, input {
   color: var(--light-text);
 }
+
+/*TEAM_PROFILE.HTML*/
+.social-container {
+  text-align: center;
+  margin-top: 15px;
+  padding: 20px 0 20px 0;
+}
+
+.social-container > span {
+  margin: 0px 20px 0px 20px;
+}
+
+i {
+  color: var(--black);
+}
 /*TEAMS.HTML*/
 
 
