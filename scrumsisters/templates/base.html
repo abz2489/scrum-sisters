@@ -18,7 +18,7 @@
       <a href="#" class="brand-logo center"><img class="logo"
           src="{{ url_for('static', filename='images/ss-logo.png')}}"></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Home</a></li>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
         <li><a href="{{ url_for('teams') }}">Teams</a></li>
         
         {% if current_user.is_authenticated %}
@@ -37,16 +37,16 @@
     <nav class="bottom-nav hide-on-large-only" id="nav-bar">
       <div class="nav-wrapper">
         <div class="center">
-          <span><a href="#"><i class="material-symbols-outlined" id="user-icon">person</i></a></span>
-          <span><a href="#"><i class="material-symbols-outlined" id="home-icon">home</i></a></span>
-          <span><a href="#"><i class="material-symbols-outlined sidenav-trigger right" id="menu-icon"
+          <span><a href="{{ url_for('login') }}"><i class="material-symbols-outlined" id="user-icon">person</i></a></span>
+          <span><a href="{{ url_for('home') }}"><i class="material-symbols-outlined" id="home-icon">home</i></a></span>
+          <span><a><i class="material-symbols-outlined sidenav-trigger right" id="menu-icon"
                 data-target="mobile-menu">menu</i></a></span>
         </div>
       </div>
     </nav>
     <!-- Mobile Sidenav -->
     <ul id='mobile-menu' class='sidenav'>
-      <li><a href="#!">Home</a></li>
+      <li><a href="{{ url_for('home') }}">Home</a></li>
       <li><a href="{{ url_for('teams') }}">Teams</a></li>
       
       {% if current_user.is_authenticated %}
