@@ -107,7 +107,7 @@ class Teams(db.Model):
     training_day1 = db.Column(db.Integer, db.ForeignKey(
         "days.id"), nullable=False)
     training_day2 = db.Column(db.Integer, db.ForeignKey(
-        "days.id"), nullable=False)
+        "days.id"), nullable=True)
     training_time = db.Column(db.Time, nullable=False)
     training_location = db.Column(db.Text, nullable=False)
     fb_url = db.Column(db.Text, nullable=True)
