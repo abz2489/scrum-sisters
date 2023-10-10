@@ -17,7 +17,8 @@ from scrumsisters import (
 
 @app.route("/home")
 def home():
-    return render_template("index.html")
+    teams = Teams.query.all()
+    return render_template("index.html", teams=teams)
 
 
 @app.route("/teams")
