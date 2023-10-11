@@ -23,7 +23,8 @@ def home():
 
 @app.route("/teams")
 def teams():
-    return render_template("teams.html")
+    teams = Teams.query.all()
+    return render_template("teams.html", teams=teams)
 
 
 @app.route("/register", methods=["GET", "POST"])
