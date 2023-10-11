@@ -17,6 +17,10 @@ body {
 p {
   font-size: 1.25rem;
 }
+
+a {
+  color: var(--light-text);
+}
 /* MOBILE TOP BAR */
 #top-logo-bar {
     height: 100px;
@@ -308,7 +312,7 @@ i {
     z-index: 1;
     opacity: 65%;
   }
-  
+
   /*PROFILE.HTML*/
   .card-panel#profile-panel {
     width: 50%;
