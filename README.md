@@ -373,3 +373,25 @@ Double check the Procfile has no blank lines under content.
 - Open Git Bash / terminal, choose where you want to clone the files.
 - Type git clone and the following into the terminal https://github.com/abz2489/scrum-sisters.git
 - Press enter to create the clone.
+
+
+# **Testing**
+All tests can be found at [TESTING.md](TESTING.md).
+
+# **Credits**
+
+## **Content**
+All content on the Scrum Sisters website was written by myself.
+
+[Clubs & Teams info](https://community.wru.wales/?utm_source=website&utm_medium=header%20link&utm_campaign=Community%20Site) 
+
+## **Media**
+[Nia Anwen Photography](https://www.facebook.com/niaanweneventphotography/) official photographer at Llantwit Fardre RFC for allowing me to use the fantastic image of the girls mid scrum for my hero image.
+
+## **Code**
+[Codemy Youtube Channel](https://www.youtube.com/playlist?list=PLCC34OHNcOtolz2Vd9ZSeSXWc8Bq23yEz) This channel helped me understand and grasp Flask much better. I particularly founf the Flask Login and Flask Migrate videos.
+
+[W3Schools](https://www.w3schools.com/howto/howto_css_overlay.asp) used to refresh on css overlays.
+
+## **Acknowledgments**
+Cohort facilitator Iris Smok for all her help and support with out cohort.
