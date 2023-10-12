@@ -300,7 +300,44 @@ Merriweather Sans - used for all other text
 
 # **Features**
 
-___
+# **Technologies Used**
+
+## **Languages**
+[HTML5](https://en.wikipedia.org/wiki/HTML5)
+
+[CSS3](https://en.wikipedia.org/wiki/CSS)
+
+[Python](https://www.python.org/)
+
+
+## **Frameworks, libraries & programs**
+[Flask](https://flask.palletsprojects.com/en/3.0.x/)  Python framework.
+
+[Flask SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/en/3.1.x/)  used for database interaction with PostgreSQL.
+
+[Flask Migrate](https://flask-migrate.readthedocs.io/en/latest/)  used for database migrations throughout the project.
+
+[Flask Login](https://flask-login.readthedocs.io/en/latest/)  used for user log in.
+
+[PostgreSQL](https://www.postgresql.org/)  used for the relational database.
+
+[Materialize CSS](https://materializecss.com/)  CSS framework.
+
+[Materialize Design](https://fonts.google.com/icons)  used with Materialize CSS.
+
+[jQuery](https://jquery.com/) used with Materialize CSS.
+
+[Git](https://git-scm.com/) used for version control. I used the terminal and git commit/push commands and the source control panel.
+
+[GitHub](https://github.com/) used as storage for the Scrum Sisters repository.
+
+[Google Fonts](https://fonts.google.com/) used to import all fonts used on the website.
+
+[Font Awesome](https://fontawesome.com/) used for social media icons used in team profiles.
+
+[Coolors](https://coolors.co/) used to build the colour palette.
+
+[Random Keygen](https://randomkeygen.com/) used to randomise a fort knox password used for the secret key.
 
 # **Deployment**
 ScrumSisters live website was deployed using Heroku.
