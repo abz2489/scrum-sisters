@@ -142,10 +142,10 @@ Responsive design for use on mobile, tablet and desktops.
 ## Structure
 
 **Site Structure**
-![Structure mind map](readme-images/ss-structure.png "Site Structure Map")
+![Structure mind map](testing/readme-images/ss-structure.png "Site Structure Map")
 
 **Relational Database Structure**
-![Structure mind map](readme-images/ss-db-relational.png "Site Structure Map")
+![Structure mind map](testing/readme-images/ss-db-relational.png "Site Structure Map")
 
 **Non Account Holders**
 No account is needed to simply view teams and their profile. Scrum Sisters is designed for people to find teams suitable to them. It's important that this is as easy to achieve as possible for visitors.
@@ -176,11 +176,12 @@ Training days will also be pre populated in the database.
 <details>
 <summary>Mobile</summary>
 
-![Mobile](readme-images/wf-homepage-mobile.png)
+![Mobile](testing/readme-images/wf-homepage-mobile.png)
 </details>
 <details>
 <summary>Desktop</summary>
-*Enter Link Here*
+
+![Desktop](testing/readme-images/wf-homepage-desktop.webp)
 
 </details>
 </details>
@@ -190,11 +191,12 @@ Training days will also be pre populated in the database.
 <details>
 <summary>Mobile</summary>
 
-![Mobile](readme-images/wf-register-mobile.png)
+![Mobile](testing/readme-images/wf-register-mobile.png)
 </details>
 <details>
 <summary>Desktop</summary>
-*Enter Link Here*
+
+![Desktop](testing/readme-images/wf-register-desktop.webp)
 
 </details>
 </details>
@@ -204,11 +206,12 @@ Training days will also be pre populated in the database.
 <details>
 <summary>Mobile</summary>
 
-![Mobile](readme-images/wf-signin-mobile.png)
+![Mobile](testing/readme-images/wf-signin-mobile.png)
 </details>
 <details>
 <summary>Desktop</summary>
-*Enter Link Here*
+
+![Desktop](testing/readme-images/wf-signin-desktop.webp)
 
 </details>
 </details>
@@ -218,11 +221,12 @@ Training days will also be pre populated in the database.
 <details>
 <summary>Mobile</summary>
 
-![Mobile](readme-images/wf-my-teams-mobile.png)
+![Mobile](testing/readme-images/wf-my-teams-mobile.png)
 </details>
 <details>
 <summary>Desktop</summary>
-*Enter Link Here*
+
+![Desktop](testing/readme-images/wf-my-teams-desktop.webp)
 
 </details>
 </details>
@@ -232,11 +236,12 @@ Training days will also be pre populated in the database.
 <details>
 <summary>Mobile</summary>
 
-![Mobile](readme-images/wf-teams-mobile.png)
+![Mobile](testing/readme-images/wf-teams-mobile.png)
 </details>
 <details>
 <summary>Desktop</summary>
-*Enter Link Here*
+
+![Desktop](testing/readme-images/wf-teams-page-desktop.webp)
 
 </details>
 </details>
@@ -246,11 +251,12 @@ Training days will also be pre populated in the database.
 <details>
 <summary>Mobile</summary>
 
-![Mobile](readme-images/wf-team-profile-mobile.png)
+![Mobile](testing/readme-images/wf-team-profile-mobile.png)
 </details>
 <details>
 <summary>Desktop</summary>
-*Enter Link Here*
+
+![Desktop](testing/readme-images/wf-team-profile-desktop.webp)
 
 </details>
 </details>
@@ -260,11 +266,12 @@ Training days will also be pre populated in the database.
 <details>
 <summary>Mobile</summary>
 
-![Mobile](readme-images/wf-add-team-mobile.png)
+![Mobile](testing/readme-images/wf-add-team-mobile.png)
 </details>
 <details>
 <summary>Desktop</summary>
-*Enter Link Here*
+
+![Desktop](testing/readme-images/wf-add-team-dektop.webp)
 
 </details>
 </details>
@@ -274,11 +281,12 @@ Training days will also be pre populated in the database.
 <details>
 <summary>Mobile</summary>
 
-![Mobile](readme-images/wf-my-account-mobile.png)
+![Mobile](testing/readme-images/wf-my-account-mobile.png)
 </details>
 <details>
 <summary>Desktop</summary>
-*Enter Link Here*
+
+![Desktop](testing/readme-images/wf-my-account-desktop.webp)
 
 </details>
 </details>
