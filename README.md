@@ -15,10 +15,9 @@ Scrum Sisters is an app for users to find women and girls rugby teams in South W
 ### **User Stories**
 Non-account holders
 - As a user with no account, I want to find teams easily.
-- As a user with no account, I want to find contact information for the team.
 - As a user with no account, looking for girls teams I want to find the age range of the girls teams.
 - As a user with no account, I want to find the training location details.
-- As a user with no account, I want to find training days and times for the team.
+- As a user with no account, I want to find training information and times for the team.
 - As a user with no account, I want to easily register an account.
 
 Account holders
@@ -52,7 +51,7 @@ Responsive design for use on mobile, tablet and desktops.
 
 **Footer**
 - Link to GitHub
-- Link to LinkedIn
+- Copyright
 - Project for educational purposes disclaimer
 
 **Home Page**
@@ -60,13 +59,13 @@ Responsive design for use on mobile, tablet and desktops.
 - Footer
 - Hero image (to be chosen)
 - Button to view teams under hero image
-- Teams carousel
+- Teams carousel - teams carousel was removed along with the decision to include profile pictures
 - Prompt to register
 
 **Teams Page**
 - Teams Title
 - Grid tiles of teams
-- View Profile button for each tile
+- View Profile button for each tile - Amended to using card reveal
 - Pagination
     - 5 teams per page for mobile
     - 9 teams per page for tablet
@@ -283,3 +282,42 @@ Training days will also be pre populated in the database. Users will be able to 
 
 </details>
 </details>
+
+# **Features**
+
+___
+
+# **Deployment**
+ScrumSisters live website was deployed using Heroku.
+
+## **Heroku Deployment**
+1. Create a requirements.txt file containing project dependencies. To do this run ```pip3 freeze > requirements.txt```
+in the terminal.
+2. Create a procfile with 'web: python run.py'. To do this run ```echo web: python run.py > Procfile``` in the terminal.
+Double check the Procfile has no blank lines under content.
+3. Commit changes to github repository.
+4. Sign up or log in to Heroku. 
+5. Click the 'New' button on the right and select 'Create New App', enter app name and select your nearest region. Click 'Create App'.
+6. Click the 'Deploy' tab on your app dashboard.
+7. In the 'Deployment Method' section click Github to connect. Search for your repository name and click 'Connect'.
+8. Click 'Settings', navigate to the config vars section and click 'Reveal Config Vars'.
+9. Enter the config vars from your env.py file.
+10. Click 'Deploy' tab, navigate to 'Automatic Deploys' section and click 'enable automatic deploys' (optional)
+11. Navigate to 'Manual Deploy' section and click 'Deploy Branch'.
+12. When the build is done, click the 'view' button to launch the app. Alternatively click 'open app' located at the top right.
+## **Local Deployment**
+
+**How to Fork**
+- Go to GitHub repository.
+- In the top right of the screen, click the fork button.
+- A form will appear, you can edit the name and description or keep it the same.
+- Click the green "Create Fork" button.
+
+
+**How to Clone**
+- In the GitHub respository click the green Code button, that sits above the repository files.
+- When the dropdown appears choose from HTTP, SSH or GitHub CLI.
+- Click the copy button to the right of the URL to copy to your clipboard.
+- Open Git Bash / terminal, choose where you want to clone the files.
+- Type git clone and the following into the terminal https://github.com/abz2489/scrum-sisters.git
+- Press enter to create the clone.
