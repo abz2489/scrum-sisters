@@ -165,7 +165,7 @@ Clubs can have many teams. The teams database will hold the team name, club id, 
 The age groups, like the clubs will be pre populated within the database to ensure uniformity in catergories. For example if one user was to enter "under 15s" and another "U15s", finding the right age group as a visitor will become much more complicated.
 
 **Training Days**
-Training days will also be pre populated in the database. Users will be able to select more than one option as many teams train more than once a week.
+Training days will also be pre populated in the database.
 
 
 ## Skeleton
@@ -282,6 +282,21 @@ Training days will also be pre populated in the database. Users will be able to 
 
 </details>
 </details>
+
+## Surface
+### **Colour Scheme**
+
+<img src="testing/readme-images/ss-colour-scheme.webp" height="400"/> 
+
+### **Typography**
+All typography for the project has been sourced from [Google Fonts](https://fonts.google.com/).
+
+#### **Scrum Sisters Logo**
+Ostrich Sans Inline Regular & Ostrich Sans Light
+
+#### **All other content**
+Karla - used on all headings
+Merriweather Sans - used for all other text
 
 # **Features**
 
