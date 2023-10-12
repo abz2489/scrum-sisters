@@ -17,6 +17,8 @@ if os.path.exists("env.py"):
 app = Flask(__name__)
 # App configuration variables
 app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
+app.config['SQLALCHEMY_POOL_SIZE'] = 20
+app.config['SQLALCHEMY_MAX_OVERFLOW'] = 30
 if os.environ.get("DEVELOPMENT") == "True":
     app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DB_URL")
 else:
