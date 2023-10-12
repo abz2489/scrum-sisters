@@ -12,6 +12,15 @@
 body {
   background-color: var(--grey);
   color: var(--light-text);
+  font-weight: 600;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Karla', sans-serif;
+}
+
+p, a, span, input {
+  font-family: 'Merriweather Sans', sans-serif;
 }
 
 p {
@@ -69,6 +78,24 @@ nav#nav-bar.bottom-nav {
     background-color: var(--btn-green);
   }
 
+  /*TEAMS.HTML*/
+  .team-container {
+    height: 75%;
+    text-align: center;
+    color: var(--black);
+  }
+
+  .team-container > .card.medium {
+    height: 300px;
+    width: 300px;
+    margin: auto;
+  }
+
+  .card.medium > .card-content {
+    height: 25px;
+    padding-top: 15px;
+    padding-bottom: 35px;
+  }
   /*REGISTER.HTML*/
   .form-container {
     width: 100%;
@@ -162,7 +189,7 @@ table, tr, td {
 }
 
 td {
-  padding-bottom: 3px;
+  padding-bottom: 0px;
 }
 
 td:first-child {
