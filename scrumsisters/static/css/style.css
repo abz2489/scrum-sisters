@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Karla', sans-serif;
 }
 
-p, a, span, input {
+p, a, span, input, .footer-copyright {
   font-family: 'Merriweather Sans', sans-serif;
 }
 
@@ -27,8 +27,20 @@ p {
   font-size: 1.25rem;
 }
 
-a {
+a, i, span {
   color: var(--light-text);
+}
+
+.page-footer {
+  background-color: var(--black);
+}
+
+.page-footer > .container {
+  padding-bottom: 0;
+}
+
+.disclaimer {
+  font-size: 1rem;
 }
 /* MOBILE TOP BAR */
 #top-logo-bar {
@@ -296,7 +308,11 @@ div.container.team-container {
   margin: 0px 20px 0px 20px;
 }
 
-i {
+span a i {
+  color: var(--grey);
+}
+
+.material-symbols-outlined.right {
   color: var(--black);
 }
 /*TEAMS.HTML*/
