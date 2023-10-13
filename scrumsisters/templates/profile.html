@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+<!-- User Profile -->
 <div class="form-container profile">
     <div class="header-container">
         <h1 class="form-header"> {{ current_user.first_name }}'s Profile</h1>
@@ -24,24 +25,22 @@
                 </tr>
             </table>
             <div class="btn-container">
-                <a href="#delete_user" class="btn modal-trigger" id="delete-acc">Delete Account</a>
+                <a href="#delete_user" class="btn modal-trigger waves-effect" id="delete-acc">Delete Account</a>
             </div>
-              <!-- Modal Structure -->
-  <div id="delete_user" class="modal">
-    <div class="modal-content center">
-      <h4>Are you sure you want to delete this profile?</h4>
-      <a href="{{ url_for('delete_user', user_id=current_user.id) }}" class="modal-close btn yes-btn">Yes</a>
-      <a href="#!" class="modal-close btn no-btn">No</a>
-    </div>
-    <div class="modal-footer">
-      
-    </div>
-  </div>
+        </div>
+              
+<!-- Modal Structure -->
+        <div id="delete_user" class="modal">
+            <div class="modal-content center">
+                <h4>Are you sure you want to delete this profile?</h4>
+                <a href="{{ url_for('delete_user', user_id=current_user.id) }}" class="modal-close btn yes-btn">Yes</a>
+                <a class="modal-close btn no-btn">No</a>
+            </div>
         </div>
     </div>
 </div>
 
-
+<!-- My Club -->
 <div class="form-container">
     <div class="header-container">
         <h2 class="form-header club"> My Club</h2>
@@ -52,7 +51,4 @@
         </div>
     </div>
 </div>
-
-
-
 {% endblock %}
