@@ -21,8 +21,8 @@ Non-account holders
 - As a user with no account, I want to find teams easily.
 - As a user with no account, looking for girls teams I want to find the age range of the girls teams.
 - As a user with no account, I want to find the training location details.
-- As a user with no account, I want to find training information and times for the team.
-- As a user with no account, I want to easily register an account.
+- As a user with no account, I want to find training day and time for the team.
+- As a user with no account, I want to easily register an account and sign in.
 
 Account holders
 - As a user with an account, I want to be able to sign into my account easily.
