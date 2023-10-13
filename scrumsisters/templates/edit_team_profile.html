@@ -5,14 +5,12 @@
     <div class="header-container">
         {% for team in current_user.teams %}
         <h1 class="form-header">Edit {{ team }}</h1>
-        <p >Edit team details below</p>
+        <p >Edit {{ team }} details below</p>
         {% endfor %}
     </div>
     {% for message in get_flashed_messages() %}
-        <p >Edit {{ team }} details below</p>
-    </div>
-    
-        <div class="card-panel flash-msg">{{ message }}</div>
+        <div class="card-panel flash-msg">{{ message }}
+        </div>
     {% endfor %}
     <div class="container">
         <form method="POST" id="register-form">
@@ -61,7 +59,7 @@
             {{ form.user_id(disabled=True) }}
 
             <div class="btn-container">
-                {{ form.submit(class="btn btn-submit") }}
+                {{ form.submit(class="btn btn-submit waves-effect") }}
             </div>
         </form>
     </div>
