@@ -1,43 +1,44 @@
 {% extends "base.html" %}
 {% block content %}
-
-<div class="form-container">
-    <div class="header-container">
-        <h1 class="form-header">Register</h1>
-        <p >Create your user account</p>
-    </div>
-    {% for message in get_flashed_messages() %}
-        <div class="card-panel flash-msg">{{ message }}</div>
-    {% endfor %}
-    <div class="container">
-        <form method="POST" id="register-form">
-            {{ form.hidden_tag() }}
-
-            {{ form.first_name.label }}
-            {{ form.first_name() }}
-
-            {{ form.last_name.label }}
-            {{ form.last_name() }}
-
-            {{ form.email.label }}
-            {{ form.email() }}
-            
-            {{ form.user_password.label }}
-            {% for error in form.user_password.errors %}
-                <span>{{ error }}</span>
-            {% endfor %}
-            {{ form.user_password() }}
-
-            {{ form.confirm_password.label }}
-            {{ form.confirm_password() }}
-
-            {{ form.club.label }}
-            {{ form.club() }}
-
-            <div class="btn-container">
-            {{ form.submit(class="btn btn-submit") }}
+<!--Register User Form-->
+    <div class="form-container">
+        <div class="header-container">
+            <h1 class="form-header">Register</h1>
+            <p >Create your user account</p>
+        </div>
+        {% for message in get_flashed_messages() %}
+            <div class="card-panel flash-msg">{{ message }}
             </div>
-        </form>
+        {% endfor %}
+        <div class="container">
+            <form method="POST" id="register-form">
+                {{ form.hidden_tag() }}
+
+                {{ form.first_name.label }}
+                {{ form.first_name() }}
+
+                {{ form.last_name.label }}
+                {{ form.last_name() }}
+
+                {{ form.email.label }}
+                {{ form.email() }}
+            
+                {{ form.user_password.label }}
+                {% for error in form.user_password.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+                {{ form.user_password() }}
+
+                {{ form.confirm_password.label }}
+                {{ form.confirm_password() }}
+
+                {{ form.club.label }}
+                {{ form.club() }}
+
+                <div class="btn-container">
+                    {{ form.submit(class="btn btn-submit waves-effect") }}
+                </div>
+            </form>
+        </div>
     </div>
-</div>
 {% endblock %}

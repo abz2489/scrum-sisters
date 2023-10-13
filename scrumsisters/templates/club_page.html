@@ -1,28 +1,26 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="form-container">
-    <div class="header-container">
-        <h1 class="form-header"> {{ current_user.clubs }}'s Teams</h1>
-    </div>
+<!--Club Page-->
+    <div class="form-container">
+        <div class="header-container">
+            <h1 class="form-header"> {{ current_user.clubs }} Teams</h1>
+        </div>
 
     
-    {% for team in current_user.teams | batch(3) %}
-    <div class="container team-container">
+        {% for team in current_user.teams | batch(3) %}
+        <div class="container team-container">
             <div class="club_team_squares col s7 m2 teams valign-wrapper">
-                <a href="{{ url_for('team_profile', team_club=team.id) }}" class="user_clubs_teams">{{ team[0] }}</a>
+                <a href="{{ url_for('team_profile', team_club=team) }}" class="user_clubs_teams">{{ team[loop.index0] }}</a>
             </div>
-    {% endfor %}
+        {% endfor %}
             <div class="add-team club_team_squares col s7 m2">
                 <div class="center-button">
-                <a href="{{ url_for('add_team', user_club_id=current_user.club_id) }}" class="btn-floating btn-large center" id="add-bg">
-                    <i class="large material-symbols-outlined" id="add">add</i>
-                </a>
-                <p>Add Team</p>
+                    <a href="{{ url_for('add_team', user_club_id=current_user.club_id) }}" class="btn-floating btn-large center waves-effect" id="add-bg">
+                        <i class="large material-symbols-outlined" id="add">add</i>
+                    </a>
+                    <p>Add Team</p>
                 </div>
             </div>
+        </div>
     </div>
-</div>
-
-
-
 {% endblock %}

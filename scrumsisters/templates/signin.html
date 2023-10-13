@@ -1,28 +1,29 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="form-container">
-    <div class="header-container">
-        <h1 class="form-header"> Sign In</h1>
-        <p >Sign in to your account</p>
-    </div>
-    {% for message in get_flashed_messages() %}
-        <div class="card-panel flash-msg">{{ message }}</div>
-    {% endfor %}
-    <div class="container">
-        <form method="POST" id="signin-form">
-            {{ form.hidden_tag() }}
-
-            {{ form.email.label }}
-            {{ form.email() }}
-
-            {{ form.password.label }}
-            {{ form.password() }}
-
-            <div class="btn-container">
-            {{ form.submit(class="btn btn-submit") }}
+<!--Sign In Form-->
+    <div class="form-container">
+        <div class="header-container">
+            <h1 class="form-header"> Sign In</h1>
+            <p >Sign in to your account</p>
+        </div>
+        {% for message in get_flashed_messages() %}
+            <div class="card-panel flash-msg">{{ message }}
             </div>
-        </form>
-    </div>
-</div>
+        {% endfor %}
+        <div class="container">
+            <form method="POST" id="signin-form">
+                {{ form.hidden_tag() }}
 
+                {{ form.email.label }}
+                {{ form.email() }}
+
+                {{ form.password.label }}
+                {{ form.password() }}
+
+                <div class="btn-container">
+                    {{ form.submit(class="btn btn-submit waves-effect") }}
+                </div>
+            </form>
+        </div>
+    </div>
 {% endblock %}

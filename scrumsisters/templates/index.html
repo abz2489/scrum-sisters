@@ -2,8 +2,8 @@
 {% block content %}
     <div class="hero-outer">
         <div class="container title-container center-align">
-        <h3 class="title">Ignite Your Rugby Passion!</h3>
-        <p class="title">Empowering Women and Girls of South Wales</p>
+            <h3 class="title">Ignite Your Rugby Passion!</h3>
+            <p class="title">Empowering Women and Girls of South Wales</p>
         </div>
         <img class="responsive-img hero-img" src="{{ url_for('static', filename='images/scrum-lscape.jpg')}}">
     </div>
@@ -13,6 +13,6 @@
     <div class="container cta-container">
         <p class="cta">Find your perfect female rugby team with Scrum Sisters </p>
         <p class="cta">Your platform for discovering and joining teams that match your skill and spirit.</p>
-        <a href="{{ url_for('teams') }}" class="btn modal-trigger" id="teams-btn">View Teams</a>
+        <a href="{{ url_for('teams') }}" class="btn waves-effect modal-trigger" id="teams-btn">View Teams</a>
     </div>
 {% endblock %}
