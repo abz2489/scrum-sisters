@@ -168,6 +168,10 @@ nav#nav-bar.bottom-nav {
     padding-top: 1.56rem;
   }
 
+  a[href="/register"] {
+    color: var(--black);
+  }
+
   form {
     padding: 0.93rem 0 3.13rem;
     max-width: 80%;
