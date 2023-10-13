@@ -19,6 +19,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Karla', sans-serif;
 }
 
+h4 {
+  color: var(--black);
+}
+
 p, a, span, input, .footer-copyright {
   font-family: 'Merriweather Sans', sans-serif;
 }
@@ -33,6 +37,10 @@ a, i, span {
 
 .page-footer {
   background-color: var(--black);
+}
+
+.btn {
+  color: var(--black);
 }
 /* MOBILE TOP BAR */
 #top-logo-bar {
@@ -102,6 +110,14 @@ nav#nav-bar.bottom-nav {
 
   #teams-btn.btn {
     background-color: var(--btn-green);
+  }
+
+  .register-container {
+    max-width: 100%;
+    margin: auto;
+    padding-top: 1rem;;
+    background-color: var(--light-bg);
+    color: var(--black);
   }
 
   /*TEAMS.HTML*/
