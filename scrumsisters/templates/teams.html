@@ -8,17 +8,17 @@
     <div class="container">
     {% for team in teams | batch(3) %}
         <div class="team-container">
-            <div class="card medium">
+            <div class="card medium rounded">
                 <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">{{ team[0] }}<i class="material-symbols-outlined right">more_vert</i></span>
+                    <span class="card-title activator">{{ team[loop.index0] }}<i class="material-symbols-outlined right" id="more">more_vert</i></span>
                     <p><a href="#">This is a link</a></p>
                 </div>
                 <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">{{ team[0] }}<i class="material-symbols-outlined right">close</i></span>
+                    <span class="card-title">{{ team[loop.index0] }}<i class="material-symbols-outlined right" id="close">close</i></span>
                     <div class="social-container">
-                        <span><a href="{{ team[0].fb_url }}" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></a></span>
-                        <span><a href="{{ team[0].tiktok_url }}" target="_blank"><i class="fa-brands fa-tiktok fa-2xl"></i></a></span>
-                        <span><a href="{{ team[0].tiktok_url }}" target="_blank"><i class="fa-brands fa-instagram fa-xl"></i></a></span>
+                        <span><a href="{{ team[loop.index0].fb_url }}" target="_blank"><i class="fa-brands fa-facebook fa-2xl" id="fb"></i></a></span>
+                        <span><a href="{{ team[loop.index0].tiktok_url }}" target="_blank"><i class="fa-brands fa-tiktok fa-2xl" id="tiktok"></i></a></span>
+                        <span><a href="{{ team[loop.index0].insta_url }}" target="_blank"><i class="fa-brands fa-instagram fa-xl" id="insta"></i></a></span>
                     </div>
                     <table>
                         <tr>
