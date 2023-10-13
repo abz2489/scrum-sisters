@@ -6,6 +6,54 @@
 
 # **Manual Testing**
 
+# **Validation Testing**
+
+## **HTML Validation**
+<details><summary>HTML</summary>
+
+![HTML validation result](testing/readme-images/ss-html-validation.webp)
+
+</details>
+
+## **CSS Validation**
+<details><summary>style.css</summary>
+
+![CSS validation result](testing/readme-images/ss-css-validation.webp)
+
+</details>
+
+## **Python Validation**
+<details><summary>__init.py__</summary>
+Passed
+
+![CI Python Linter](testing/readme-images/ss-python-init-validation.webp)
+</details>
+
+<details><summary>models.py</summary>
+Passed
+
+![CI Python Linter](testing/readme-images/ss-python-models-validation.webp)
+</details>
+
+<details><summary>forms.py</summary>
+Passed
+
+![CI Python Linter](testing/readme-images/ss-python-forms-validation.webp)
+</details>
+
+<details><summary>run.py</summary>
+Passed
+
+![CI Python Linter](testing/readme-images/ss-python-run-validation.webp)
+</details>
+
+<details><summary>models.py</summary>
+Passed
+
+![CI Python Linter](testing/readme-images/ss-python-models-validation.webp)
+</details>
+
+
 ## **User Stories Testing**
 **Non-account holders**
 
