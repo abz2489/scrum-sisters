@@ -138,6 +138,7 @@ def delete_user(user_id):
     user = Users.query.get_or_404(user_id)
     db.session.delete(user)
     db.session.commit()
+    flash("User Account Deleted Successfully!")
     return redirect(url_for('register'))
 
 
