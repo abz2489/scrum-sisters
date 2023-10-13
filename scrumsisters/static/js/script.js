@@ -4,4 +4,5 @@ $(document).ready(function(){
     $('.tooltipped').tooltip();
     $('.modal').modal();
     $('.timepicker').timepicker();
+    $('#span-year').html(new Date().getFullYear());
   });
