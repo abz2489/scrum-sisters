@@ -41,10 +41,17 @@
     <nav class="bottom-nav hide-on-large-only" id="nav-bar">
       <div class="nav-wrapper">
         <div class="nav-icons-container">
-          <span class="nav-icon1"><a href="{{ url_for('login') }}"><i class="material-symbols-outlined" id="user-icon">person</i></a></span>
-          <span class="nav-icon2"><a href="{{ url_for('home') }}"><i class="material-symbols-outlined" id="home-icon">home</i></a></span>
-          <span class="nav-icon3"><a><i class="material-symbols-outlined sidenav-trigger" id="menu-icon"
-                data-target="mobile-menu">menu</i></a></span>
+          {% if current_user.is_authenticated %}
+            <span class="nav-icon1"><a href="{{ url_for('user_profile') }}"><i class="material-symbols-outlined" id="user-icon">person</i></a></span>
+            <span class="nav-icon2"><a href="{{ url_for('home') }}"><i class="material-symbols-outlined" id="home-icon">home</i></a></span>
+            <span class="nav-icon3"><a><i class="material-symbols-outlined sidenav-trigger" id="menu-icon"
+                  data-target="mobile-menu">menu</i></a></span>
+          {% else %} 
+            <span class="nav-icon1"><a href="{{ url_for('login') }}"><i class="material-symbols-outlined" id="user-icon">person</i></a></span>
+            <span class="nav-icon2"><a href="{{ url_for('home') }}"><i class="material-symbols-outlined" id="home-icon">home</i></a></span>
+            <span class="nav-icon3"><a><i class="material-symbols-outlined sidenav-trigger" id="menu-icon"
+                  data-target="mobile-menu">menu</i></a></span>
+          {% endif %}
         </div>
       </div>
     </nav>
