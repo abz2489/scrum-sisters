@@ -79,8 +79,6 @@ nav#nav-bar.bottom-nav {
     top: 10px;
   }
 
-
-
   /*INDEX.HTML*/
   .hero-img {
     margin-top: 2.19rem;
@@ -99,6 +97,7 @@ nav#nav-bar.bottom-nav {
 
   .cta-container {
     text-align: center;
+    max-width: 80%;
   }
 
   #teams-btn.btn {
@@ -151,6 +150,8 @@ nav#nav-bar.bottom-nav {
 
   form {
     padding: 0.93rem 0 3.13rem;
+    max-width: 80%;
+    margin: auto;
   }
 
   form#register-form > label {
@@ -253,7 +254,7 @@ td:first-child {
 }
 
 .container {
-  padding-bottom: 0.63rem;
+  padding-bottom: 3.5rem;
   width: 100%;
 }
 
