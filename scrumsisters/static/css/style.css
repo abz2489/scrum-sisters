@@ -42,6 +42,10 @@ a, i, span {
 .btn {
   color: var(--black);
 }
+
+.waves-effect input[type="submit"] {
+  color: var(--black);
+}
 /* MOBILE TOP BAR */
 #top-logo-bar {
     height: 100px;
