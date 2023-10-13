@@ -39,10 +39,10 @@
   <div>
     <nav class="bottom-nav hide-on-large-only" id="nav-bar">
       <div class="nav-wrapper">
-        <div class="center">
-          <span><a href="{{ url_for('login') }}"><i class="material-symbols-outlined" id="user-icon">person</i></a></span>
-          <span><a href="{{ url_for('home') }}"><i class="material-symbols-outlined" id="home-icon">home</i></a></span>
-          <span><a><i class="material-symbols-outlined sidenav-trigger right" id="menu-icon"
+        <div class="nav-icons-container">
+          <span class="nav-icon1"><a href="{{ url_for('login') }}"><i class="material-symbols-outlined" id="user-icon">person</i></a></span>
+          <span class="nav-icon2"><a href="{{ url_for('home') }}"><i class="material-symbols-outlined" id="home-icon">home</i></a></span>
+          <span class="nav-icon3"><a><i class="material-symbols-outlined sidenav-trigger" id="menu-icon"
                 data-target="mobile-menu">menu</i></a></span>
         </div>
       </div>
@@ -63,12 +63,12 @@
   </div>
   {% block content %}
     {% endblock %}
-    <footer class="page-footer">
+    <footer class="page-footer" id="footer">
       <div class="footer-copyright">
         <div class="container center-align">
           © Scrum Sisters <span id="span-year">2014</span>
-          <h5 class="disclaimer white-text">Disclaimer</h5>
-          <p class="disclaimer">ScrumSisters was created for educational purposes and is not a real organisation</p>
+          <h5 class="white-text">Disclaimer</h5>
+          <p>ScrumSisters was created for educational purposes and is not a real organisation</p>
         </div>
       </div>
     </footer>
