@@ -116,6 +116,10 @@ nav#nav-bar.bottom-nav {
     background-color: var(--btn-green);
   }
 
+  #register-btn.btn {
+    background-color: var(--btn-green);
+  }
+
   .register-container {
     max-width: 100%;
     margin: auto;
