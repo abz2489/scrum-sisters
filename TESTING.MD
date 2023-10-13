@@ -28,3 +28,42 @@
 |As a user with an account, I want to be able to delete my team.|Yes| Underneath the user details on the team profile page there is a large red 'Delete Account' button. When pressed a modal displays prompting the user to confirm deletion.
 |As a user with an account, I want to be able to sign out of my account.|Yes| Sign out link is located on the top nav and sidenav and displays only when a user is signed in.
 |As a user with an account, I want to add links to my team's social media.|Yes| The add team form contains fields for Facebook URL, TikTok URL and Instagram URL. The social icons also display on the team profile card on the teams page. When clicked the teams's social page will display in a new window.
+
+
+## **Responsiveness**
+
+The feature testing was completed on all of the following devices.
+The Sign in Page on iPad Air & Mini setting in Chrome Dev Tools displays the footer high on the page.
+I further tested this by changing the responsive dimensions and the footer displayed perfectly.
+
+**Mobile:**
+- iPhone 6/7/8
+
+<img src="testing/readme-images/responsive-testing-iphone678-1.webp" height="350"/>
+<img src="testing/readme-images/responsive-testing-iphone678-2.webp" height="350"/>
+<img src="testing/readme-images/responsive-testing-iphone678-3.webp" height="350"/>
+
+- iPhone X
+
+<img src="testing/readme-images/responsive-testing-iphonex-1.webp" height="350"/>
+<img src="testing/readme-images/responsive-testing-iphonex-2.webp" height="350"/>
+<img src="testing/readme-images/responsive-testing-iphonex-3.webp" height="350"/>
+
+**Tablet**
+- iPad Mini
+
+<img src="testing/readme-images/responsive-testing-ipadmini-1.webp" height="350"/>
+<img src="testing/readme-images/responsive-testing-ipadmini-2.webp" height="350"/>
+<img src="testing/readme-images/responsive-testing-ipadmini-3.webp" height="350"/>  
+
+- ipad Air
+
+<img src="testing/readme-images/responsive-testing-ipadair-1.webp" height="350"/>
+<img src="testing/readme-images/responsive-testing-ipadair-2.webp" height="350"/>
+<img src="testing/readme-images/responsive-testing-ipadair-3.webp" height="350"/>  
+
+**Desktop**
+
+<img src="testing/readme-images/responsive-testing-desktop-1.webp" height="350"/>
+<img src="testing/readme-images/responsive-testing-desktop-2.webp" height="350"/>
+<img src="testing/readme-images/responsive-testing-desktop-3.webp" height="350"/>
