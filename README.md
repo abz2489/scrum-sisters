@@ -1,4 +1,8 @@
-# Scrum Sisters
+# <p style="text-align: center; font-size: 40px;">**Scrum Sisters**</p>
+
+![](testing/readme-images/ss-am-i-responsive.png)
+
+[View the Scrum Sisters live website here](https://scrum-sisters-f6136ef90930.herokuapp.com/)
 
 # **Introduction**
 Scrum Sisters is an app for users to find women and girls rugby teams in South Wales. The app serves as a solution to a problem that I had when finding women's teams in my area. There are a wealth of rugby clubs in South Wales, but not all of them have female teams. When I was looking for a local team to play for, I found that information I did find was often wrong. Scrum Sisters allows users to register an account, with which they can add a team to the database, edit their team's information and delete the team altogether. Visitors to the Scrum Sisters website will be able to find teams and view the teams profile only.
