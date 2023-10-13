@@ -46,6 +46,7 @@ a, i, span {
 .waves-effect input[type="submit"] {
   color: var(--black);
 }
+
 /* MOBILE TOP BAR */
 #top-logo-bar {
     height: 100px;
@@ -58,7 +59,6 @@ a, i, span {
     height: 57px;
     margin-top: 10px;
 }
-
 
 /* MOBILE BOTTOM NAV BAR */
 nav#nav-bar.bottom-nav {
@@ -172,7 +172,7 @@ nav#nav-bar.bottom-nav {
     padding-top: 1.56rem;
   }
 
-  a[href="/register"] {
+  div > a[href="/register"] {
     color: var(--black);
   }
 
