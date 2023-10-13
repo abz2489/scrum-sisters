@@ -24,7 +24,7 @@ p, a, span, input, .footer-copyright {
 }
 
 p {
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 a, i, span {
@@ -34,19 +34,11 @@ a, i, span {
 .page-footer {
   background-color: var(--black);
 }
-
-.page-footer > .container {
-  padding-bottom: 0;
-}
-
-.disclaimer {
-  font-size: 1rem;
-}
 /* MOBILE TOP BAR */
 #top-logo-bar {
     height: 100px;
     background-color: #1F1F1F;
-    padding-bottom: 15px;
+    padding-bottom: 0.8rem;
 }
 
 .logo {
@@ -66,9 +58,32 @@ nav#nav-bar.bottom-nav {
     background-color: var(--black);
   }
 
+  .nav-icons-container {
+    position: relative;
+  }
+
+  .nav-icons-container > span {
+    position: absolute;
+  }
+
+  .nav-icon1 {
+    right: 70%;
+  }
+
+  .nav-icon2 {
+    right: 50%;
+  }
+
+  .nav-icon3 {
+    left: 60%;
+    top: 10px;
+  }
+
+
+
   /*INDEX.HTML*/
   .hero-img {
-    margin-top: 35px;
+    margin-top: 2.19rem;
     filter: grayscale(100%);
     padding-bottom: 0;
   }
@@ -103,10 +118,18 @@ nav#nav-bar.bottom-nav {
     margin: auto;
   }
 
+  .card-title, #more, #close, #fb, #tiktok, #insta {
+    color: var(--black)
+  }
+
   .card.medium > .card-content {
     height: 25px;
     padding-top: 15px;
     padding-bottom: 35px;
+  }
+
+  .card.medium.rounded {
+    border-radius: 10%;
   }
   /*REGISTER.HTML*/
   .form-container {
@@ -121,18 +144,13 @@ nav#nav-bar.bottom-nav {
     text-align: center;
   }
 
-  .header-container > p {
-    font-size: 20px;
-  }
-
   .form-header {
-    font-size: 42px;
-    margin-top: 20px;
-    padding-top: 25px;
+    margin-top: 1.25rem;
+    padding-top: 1.56rem;
   }
 
   form {
-    padding: 15px 0 50px;
+    padding: 0.93rem 0 3.13rem;
   }
 
   form#register-form > label {
@@ -142,7 +160,7 @@ nav#nav-bar.bottom-nav {
 
 form#register-form > .btn-container {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 0.63rem;
 }
 
 form#register-form > .btn-container > .btn {
@@ -164,7 +182,7 @@ form#signin-form > label {
 
 form#signin-form > .btn-container {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 0.40rem;
 }
 
 form#signin-form > .btn-container > .btn {
@@ -176,7 +194,7 @@ form#signin-form > .btn-container > .btn {
 .form-container.profile {
     background-color: var(--grey);
     color: var(--light-text);
-    padding-bottom: 25px;
+    padding-bottom: 1.56rem;
 }
 
 .form-container > .label {
@@ -190,9 +208,9 @@ form#signin-form > .btn-container > .btn {
 
 #edit.material-symbols-outlined {
   position: absolute;
-  font-size: 25px;
-  top: 8px;
-  right: 5px;
+  font-size: 1.56rem;
+  top: 0.5rem;
+  right: 0.31rem;
   color: var(--black);
 }
 
@@ -201,7 +219,7 @@ table, tr, td {
 }
 
 td {
-  padding-bottom: 0px;
+  padding-bottom: 0;
 }
 
 td:first-child {
@@ -215,7 +233,7 @@ td:first-child {
 
 .card-panel > .btn-container{
   text-align: center;
-  padding-top: 15px;
+  padding-top: 0.94rem;
 }
 
 .btn-container > #delete-acc {
@@ -235,7 +253,7 @@ td:first-child {
 }
 
 .container {
-  padding-bottom: 50px;
+  padding-bottom: 0.63rem;
   width: 100%;
 }
 
@@ -244,10 +262,10 @@ td:first-child {
 }
 
 .clubs-square {
-  width: 200px;
-  height: 200px;
+  width: 12.5rem;
+  height: 12.5rem;
   margin: auto;
-  border: 10px;
+  border: 0.63rem;
   background-color: var(--square);
   opacity: 80%;
   border-radius: 10%;
@@ -256,7 +274,7 @@ td:first-child {
 .user_clubs_teams {
   margin: auto;
   color: var(--light-text);
-  font-size: 30px;
+  font-size: 1.88rem;
   text-align: center;
 }
 
@@ -267,15 +285,15 @@ div.container.team-container {
 }
 
 .club_team_squares {
-  height: 200px;
-  width: 200px;
+  width: 12.5rem;
+  height: 12.5rem;
   background-color: var(--square);
   border-radius: 10%;
   margin: auto;
 }
 
 .club_team_squares.add-team {
-  margin-top: 25px;
+  margin-top: 1.56rem;
 }
 
 #add-bg.btn-floating.btn-large {
@@ -285,7 +303,7 @@ div.container.team-container {
 }
 
 .center-button {
-  padding: 55px;
+  padding: 3.44rem;
 }
 
 /*ADD_TEAMS.HTML*/
@@ -300,24 +318,13 @@ div.container.team-container {
 /*TEAM_PROFILE.HTML*/
 .social-container {
   text-align: center;
-  margin-top: 15px;
+  margin-top: 0.94rem;
   padding: 20px 0 20px 0;
 }
 
 .social-container > span {
-  margin: 0px 20px 0px 20px;
+  margin: 0 1.25rem 0 1.25rem;
 }
-
-span a i {
-  color: var(--grey);
-}
-
-.material-symbols-outlined.right {
-  color: var(--black);
-}
-/*TEAMS.HTML*/
-
-
 
 /*MEDIA QUERIES*/
 @media only screen and (min-width: 1440px) {
@@ -351,7 +358,7 @@ span a i {
 
   .title-container {
     position: absolute;
-    top: 35px;
+    top: 2.19rem;
     z-index: 1;
     opacity: 65%;
   }
@@ -360,6 +367,4 @@ span a i {
   .card-panel#profile-panel {
     width: 50%;
   }
-
-  /*CLUB_PAGE.HTML*/
 }
