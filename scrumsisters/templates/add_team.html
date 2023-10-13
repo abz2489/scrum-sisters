@@ -13,25 +13,25 @@
             <form method="POST" id="register-form">
                 {{ form.hidden_tag() }}
 
-                {{ form.team_name.label }}
+                {{ form.team_name.label }}*
                 {{ form.team_name() }}
 
                 {{ form.club.label }}
                 {{ form.club(disabled=True) }}
 
-                {{ form.age_group.label }}
+                {{ form.age_group.label }}*
                 {{ form.age_group() }}
             
-                {{ form.training_day1.label }}
+                {{ form.training_day1.label }}*
                 {{ form.training_day1() }}
 
                 {{ form.training_day2.label }}
                 {{ form.training_day2() }}
 
-                {{ form.training_time.label }}
+                {{ form.training_time.label }}*
                 {{ form.training_time(class="timepicker") }}
 
-                {{ form.training_location.label }}
+                {{ form.training_location.label }}*
                 {{ form.training_location() }}
 
                 {{ form.fb_url.label }}

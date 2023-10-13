@@ -14,25 +14,25 @@
             <form method="POST" id="register-form">
                 {{ form.hidden_tag() }}
 
-                {{ form.first_name.label }}
+                {{ form.first_name.label }}*
                 {{ form.first_name() }}
 
-                {{ form.last_name.label }}
+                {{ form.last_name.label }}*
                 {{ form.last_name() }}
 
-                {{ form.email.label }}
+                {{ form.email.label }}*
                 {{ form.email() }}
             
-                {{ form.user_password.label }}
+                {{ form.user_password.label }}*
                 {% for error in form.user_password.errors %}
                     <span>{{ error }}</span>
                 {% endfor %}
                 {{ form.user_password() }}
 
-                {{ form.confirm_password.label }}
+                {{ form.confirm_password.label }}*
                 {{ form.confirm_password() }}
 
-                {{ form.club.label }}
+                {{ form.club.label }}*
                 {{ form.club() }}
 
                 <div class="btn-container">
