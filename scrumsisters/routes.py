@@ -1,4 +1,5 @@
-from flask import render_template, flash, redirect, url_for, Markup
+from flask import render_template, flash, redirect, url_for
+from markupsafe import Markup
 from forms import UserRegistrationForm, UserSignInForm, AddTeamForm
 from sqlalchemy import text
 from scrumsisters import app, db, migrate
