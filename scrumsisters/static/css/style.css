@@ -139,6 +139,7 @@ nav#nav-bar.bottom-nav {
     height: 300px;
     width: 300px;
     margin: auto;
+    margin-top: 1.56rem;
   }
 
   .card-title, #more, #close, #fb, #tiktok, #insta {
@@ -319,6 +320,7 @@ div.container.team-container {
   background-color: var(--square);
   border-radius: 10%;
   margin: auto;
+  margin-top: 1.56rem;
 }
 
 .club_team_squares.add-team {
