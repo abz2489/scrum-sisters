@@ -11,8 +11,15 @@ The expression delimiter was all wrong and has been amended to team.team_name to
 Implementing these fixes has stopped causing server errors and users can proceed to the team profile page.
 
 2. The teams displayed on the team profile page have a lack of spacing between them. Fixed by adding margin-top to club_team_squares. CSS will need optimising for this as I have repeated myself.
-![ss-bug2](testing/readme-images/ss-bug2)
-![ss-fix2](testing/readme-images/ss-fix2)
+
+<img src="testing/readme-images/ss-bug2.png" height="350"/>
+<img src="testing/readme-images/ss-fix2.png" height="350"/>
+
+
+3. When accessing team profile from the club page and proceeding to delete the "yes" button on the pop up modal has a circular effect class obstructing the text. Fixed by removing the class, this keeps the styling uniform with the modal used elsewhere within the app as well.
+
+<img src="testing/readme-images/ss-bug3.png" width="350"/>
+<img src="testing/readme-images/ss-fix3.png" width="350"/>
 
 # **Manual Testing**
 
