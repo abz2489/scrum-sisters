@@ -9,7 +9,7 @@
     
         {% for team in current_user.teams %}
         <div class="container team-container">
-            <div class="club_team_squares col s7 m2 teams valign-wrapper">
+            <div class="club_team_squares col s7 m2 valign-wrapper">
                 <a href="{{ url_for('team_profile', team_club=team.id ) }}" class="user_clubs_teams">{{ team.team_name }}</a>
             </div>
         {% endfor %}
