@@ -4,6 +4,16 @@
 
 [View the Scrum Sisters live website here](https://scrum-sisters-f6136ef90930.herokuapp.com/)
 
+# **Bugs & Fixes**
+1. Batch filter in for loop not working (likely not used correctly). I have removed and will return to this if there is time.
+The team id parameter was also missing from the url. This has been changed to team_club=team.id.
+The expression delimiter was all wrong and has been amended to team.team_name to show the team name for each link.
+Implementing these fixes has stopped causing server errors and users can proceed to the team profile page.
+
+2. The teams displayed on the team profile page have a lack of spacing between them. Fixed by adding margin-top to club_team_squares. CSS will need optimising for this as I have repeated myself.
+![ss-bug2](testing/readme-images/ss-bug2)
+![ss-fix2](testing/readme-images/ss-fix2)
+
 # **Manual Testing**
 
 # **Validation Testing**
