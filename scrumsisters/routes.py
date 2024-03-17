@@ -194,7 +194,7 @@ def add_team(user_club_id):
 @login_required
 def team_profile(team_club):
     team = Teams.query.get_or_404(team_club)
-    return render_template('team_profile.html')
+    return render_template('team_profile.html', team=team)
 
 
 @app.route("/edit_team_profile/<team_id>", methods=["GET", "POST"])
