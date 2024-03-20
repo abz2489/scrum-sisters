@@ -7,15 +7,17 @@ from wtforms import (
     SelectMultipleField,
     SubmitField,
     URLField,
-    TimeField,
+    DateTimeField
     )
 from wtforms.validators import (
     DataRequired,
     EqualTo,
     Optional,
     URL,
-    InputRequired
+    InputRequired,
+    Regexp
     )
+import re
 
 
 # User registration form class
@@ -49,7 +51,9 @@ class AddTeamForm(FlaskForm):
         "Training Day 1", coerce=int, validators=[InputRequired()])
     training_day2 = SelectField(
         "Training Day 2", coerce=int)
-    training_time = StringField('Training Time')
+    training_time = DateTimeField('Training Time', format='%H:%M', validators=[Regexp(
+        '^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$',
+        message="Time format needs to be in 24 hours format")])
     training_location = StringField(
         'Training Location', validators=[DataRequired()])
     fb_url = URLField(
