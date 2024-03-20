@@ -6,9 +6,11 @@
             <h1 class="form-header">Add Team</h1>
             <p >Fill out the form below to add your team to {{ current_user.clubs }}'s Teams</p>
         </div>
+
         {% for message in get_flashed_messages() %}
             <div class="card-panel flash-msg">{{ message }}</div>
         {% endfor %}
+
         <div class="container">
             <form method="POST" id="register-form">
                 {{ form.hidden_tag() }}
@@ -29,26 +31,29 @@
                 {{ form.training_day2() }}
 
                 {{ form.training_time.label }}*
-                {{ form.training_time(class="timepicker") }}
+                    {% for error in form.training_time.errors %}
+                        <div class="error_message">{{ error }}</div>
+                    {% endfor %}
+                {{ form.training_time() }}
 
                 {{ form.training_location.label }}*
                 {{ form.training_location() }}
 
                 {{ form.fb_url.label }}
                     {% for error in form.fb_url.errors %}
-                        <span>{{ error }}</span>
+                        <div class="error_message">{{ error }}</div>
                     {% endfor %}
                 {{ form.fb_url() }}
 
                 {{ form.tiktok_url.label }}
                     {% for error in form.tiktok_url.errors %}
-                        <span>{{ error }}</span>
+                        <div class="error_message">{{ error }}</div>
                     {% endfor %}
                 {{ form.tiktok_url() }}
 
                 {{ form.insta_url.label }}
                     {% for error in form.insta_url.errors %}
-                        <span>{{ error }}</span>
+                        <div class="error_message">{{ error }}</div>
                     {% endfor %}
                 {{ form.insta_url() }}
 
