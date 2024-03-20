@@ -47,6 +47,10 @@ a, i, span {
   color: var(--black);
 }
 
+.error_message {
+  color: var(--warning);
+}
+
 /* MOBILE TOP BAR */
 #top-logo-bar {
     height: 100px;
