@@ -6,44 +6,44 @@
         </div>
 
         <div class="container">
-            {% for team in teams | batch(3) %}
+            {% for team in teams %}
                 <div class="team-container">
                     <div class="card medium rounded">
                         <div class="card-content">
-                            <span class="card-title activator waves-effect">{{ team[loop.index0] }}<i class="material-symbols-outlined right" id="more">more_vert</i></span>
+                            <span class="card-title activator waves-effect">{{ team.team_name }}<i class="material-symbols-outlined right" id="more">more_vert</i></span>
                             <p><a href="#">This is a link</a></p>
                         </div>
                         <div class="card-reveal">
                             <span class="card-title">{{ team[loop.index0] }}<i class="material-symbols-outlined right" id="close">close</i></span>
                             <div class="social-container">
-                                <span><a href="{{ team[loop.index0].fb_url }}" target="_blank"><i class="fa-brands fa-facebook fa-2xl" id="fb"></i></a></span>
-                                <span><a href="{{ team[loop.index0].tiktok_url }}" target="_blank"><i class="fa-brands fa-tiktok fa-2xl" id="tiktok"></i></a></span>
-                                <span><a href="{{ team[loop.index0].insta_url }}" target="_blank"><i class="fa-brands fa-instagram fa-xl" id="insta"></i></a></span>
+                                <span><a href="{{ team.fb_url }}" target="_blank"><i class="fa-brands fa-facebook fa-2xl" id="fb"></i></a></span>
+                                <span><a href="{{ team.tiktok_url }}" target="_blank"><i class="fa-brands fa-tiktok fa-2xl" id="tiktok"></i></a></span>
+                                <span><a href="{{ team.insta_url }}" target="_blank"><i class="fa-brands fa-instagram fa-xl" id="insta"></i></a></span>
                             </div>
                             <table>
                                 <tr>
                                     <td>Club:</td>
-                                    <td>{{ team[0].clubs.club_name }}</td>
+                                    <td>{{ team.clubs.club_name }}</td>
                                 </tr>
                                 <tr>
                                     <td>Age Group:</td>
-                                    <td>{{ team[0].age }}</td>
+                                    <td>{{ team.age }}</td>
                                 </tr>
                                 <tr>
                                     <td>Training Day 1:</td>
-                                    <td>{{ team[0].day1 }}</td>
+                                    <td>{{ team.day1 }}</td>
                                 </tr>
                                 <tr>
                                     <td>Training Day 2:</td>
-                                    <td>{{ team[0].day2 }}</td>
+                                    <td>{{ team.day2 }}</td>
                                 </tr>
                                 <tr>
                                     <td>Training Time:</td>
-                                    <td>{{ team[0].training_time }}</td>
+                                    <td>{{ team.training_time }}</td>
                                 </tr>
                                 <tr>
                                     <td>Training Location:</td>
-                                    <td>{{ team[0].training_location }}</td>
+                                    <td>{{ team.training_location }}</td>
                                 </tr>
                             </table>
                         </div>
