@@ -1,17 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
-<!--TEdit Team Form-->
+    <!--Add Team Form-->
     <div class="form-container">
         <div class="header-container">
-            {% for team in current_user.teams %}
-                <h1 class="form-header">Edit {{ team }}</h1>
-                <p >Edit {{ team }} details below</p>
-            {% endfor %}
+            <h1 class="form-header">Edit {{ team }}</h1>
+            <p >Edit {{ team }} details below</p>
         </div>
+
         {% for message in get_flashed_messages() %}
-            <div class="card-panel flash-msg">{{ message }}
-            </div>
+            <div class="card-panel flash-msg">{{ message }}</div>
         {% endfor %}
+
         <div class="container">
             <form method="POST" id="register-form">
                 {{ form.hidden_tag() }}
@@ -32,26 +31,29 @@
                 {{ form.training_day2() }}
 
                 {{ form.training_time.label }}
-                {{ form.training_time(class="timepicker") }}
+                    {% for error in form.training_time.errors %}
+                        <div class="error_message">{{ error }}</div>
+                    {% endfor %}
+                {{ form.training_time() }}
 
                 {{ form.training_location.label }}
                 {{ form.training_location() }}
 
                 {{ form.fb_url.label }}
                     {% for error in form.fb_url.errors %}
-                        <span>{{ error }}</span>
+                        <div class="error_message">{{ error }}</div>
                     {% endfor %}
                 {{ form.fb_url() }}
 
                 {{ form.tiktok_url.label }}
                     {% for error in form.tiktok_url.errors %}
-                        <span>{{ error }}</span>
+                        <div class="error_message">{{ error }}</div>
                     {% endfor %}
                 {{ form.tiktok_url() }}
 
                 {{ form.insta_url.label }}
                     {% for error in form.insta_url.errors %}
-                        <span>{{ error }}</span>
+                        <div class="error_message">{{ error }}</div>
                     {% endfor %}
                 {{ form.insta_url() }}
 
@@ -59,7 +61,7 @@
                 {{ form.user_id(disabled=True) }}
 
                 <div class="btn-container">
-                    {{ form.submit(class="btn btn-submit waves-effect") }}
+                    {{ form.submit(class="btn btn-submit") }}
                 </div>
             </form>
         </div>
