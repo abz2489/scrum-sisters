@@ -3,8 +3,7 @@
 <!-- Team Profile -->
     <div class="form-container profile">
         <div class="header-container">
-            {% for team in current_user.teams %}
-                <h1 class="form-header"> {{ team }} Profile</h1>  
+            <h1 class="form-header"> {{ team }} Profile</h1>  
         </div>
 
         <div class="container">
@@ -57,5 +56,4 @@
             </div>
         </div>
     </div>
-            {% endfor %}
 {% endblock %}
