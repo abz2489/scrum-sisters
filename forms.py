@@ -15,16 +15,15 @@ from wtforms.validators import (
     Optional,
     URL,
     InputRequired,
-    Regexp
+    Email
     )
-import re
-
+import email_validator
 
 # User registration form class
 class UserRegistrationForm(FlaskForm):
     first_name = StringField("First Name", validators=[DataRequired()])
     last_name = StringField("Last Name", validators=[DataRequired()])
-    email = StringField("Email", validators=[DataRequired()])
+    email = StringField("Email", validators=[DataRequired(), Email(message="Please enter a valid email address") ])
     club = SelectField("Clubs", coerce=int, validators=[DataRequired()])
     user_password = PasswordField(
         'Password', validators=[DataRequired(), EqualTo(
