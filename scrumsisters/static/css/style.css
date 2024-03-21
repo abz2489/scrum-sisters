@@ -37,6 +37,7 @@ a, i, span {
 
 .page-footer {
   background-color: var(--black);
+  padding-top: 0;
 }
 
 .btn {
@@ -140,8 +141,8 @@ nav#nav-bar.bottom-nav {
   }
 
   .team-container > .card.medium {
-    height: 300px;
-    width: 300px;
+    height: 15rem;
+    width: 18rem;
     margin: auto;
     margin-top: 1.56rem;
   }
@@ -287,7 +288,7 @@ td:first-child {
 }
 
 .container {
-  padding-bottom: 3.5rem;
+  padding-bottom: 2rem;
   width: 100%;
 }
 
