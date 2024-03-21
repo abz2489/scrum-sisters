@@ -17,14 +17,15 @@ Scrum Sisters is an app for users to find women and girls rugby teams in South W
 - Allow account holders to add, edit and delete teams.
 
 ### **User Stories**
-Non-account holders
+
+**Non-account holders**
 - As a user with no account, I want to find teams easily.
 - As a user with no account, looking for girls teams I want to find the age range of the girls teams.
 - As a user with no account, I want to find the training location details.
 - As a user with no account, I want to find training day and time for the team.
 - As a user with no account, I want to easily register an account and sign in.
 
-Account holders
+**Account holders**
 - As a user with an account, I want to be able to sign into my account easily.
 - As a user with an account, I want to be able to edit my account details easily.
 - As a user with an account, I want to be able to delete my account easily.
@@ -46,7 +47,7 @@ Responsive design for use on mobile, tablet and desktops.
 - Register nav link
 - Sign in nav link
 
-**Navigation Bar** - When User Registered and Singed In
+**Navigation Bar** - When User Registered and Signed in
 - Scrum Sisters logo
 - Teams nav link
 - My Teams nav link
@@ -54,7 +55,6 @@ Responsive design for use on mobile, tablet and desktops.
 - Sign Out nav link
 
 **Footer**
-- Link to GitHub
 - Copyright
 - Project for educational purposes disclaimer
 
@@ -323,19 +323,21 @@ Merriweather Sans - used for all other text
 
 
 ## **Frameworks, libraries & programs**
-[Flask](https://flask.palletsprojects.com/en/3.0.x/)  Python framework.
+[Flask](https://flask.palletsprojects.com/en/3.0.x/) Python framework.
 
-[Flask SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/en/3.1.x/)  used for database interaction with PostgreSQL.
+[Flask SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/en/3.1.x/) used for database interaction with PostgreSQL.
 
-[Flask Migrate](https://flask-migrate.readthedocs.io/en/latest/)  used for database migrations throughout the project.
+[Flask Migrate](https://flask-migrate.readthedocs.io/en/latest/) used for database migrations throughout the project.
 
-[Flask Login](https://flask-login.readthedocs.io/en/latest/)  used for user log in.
+[Flask Login](https://flask-login.readthedocs.io/en/latest/) used for user log in.
 
-[PostgreSQL](https://www.postgresql.org/)  used for the relational database.
+[Random Keygen](https://randomkeygen.com/) used to randomise a fort knox password used for the secret key.
 
-[Materialize CSS](https://materializecss.com/)  CSS framework.
+[PostgreSQL](https://www.postgresql.org/) used for the relational database.
 
-[Materialize Design](https://fonts.google.com/icons)  used with Materialize CSS.
+[Materialize CSS](https://materializecss.com/) CSS framework.
+
+[Materialize Design](https://fonts.google.com/icons) used with Materialize CSS.
 
 [jQuery](https://jquery.com/) used with Materialize CSS.
 
@@ -349,26 +351,11 @@ Merriweather Sans - used for all other text
 
 [Coolors](https://coolors.co/) used to build the colour palette.
 
-[Random Keygen](https://randomkeygen.com/) used to randomise a fort knox password used for the secret key.
+
 
 # **Deployment**
 ScrumSisters live website was deployed using Heroku.
 
-## **Heroku Deployment**
-1. Create a requirements.txt file containing project dependencies. To do this run ```pip3 freeze > requirements.txt```
-in the terminal.
-2. Create a procfile with 'web: python run.py'. To do this run ```echo web: python run.py > Procfile``` in the terminal.
-Double check the Procfile has no blank lines under content.
-3. Commit changes to github repository.
-4. Sign up or log in to Heroku. 
-5. Click the 'New' button on the right and select 'Create New App', enter app name and select your nearest region. Click 'Create App'.
-6. Click the 'Deploy' tab on your app dashboard.
-7. In the 'Deployment Method' section click Github to connect. Search for your repository name and click 'Connect'.
-8. Click 'Settings', navigate to the config vars section and click 'Reveal Config Vars'.
-9. Enter the config vars from your env.py file.
-10. Click 'Deploy' tab, navigate to 'Automatic Deploys' section and click 'enable automatic deploys' (optional)
-11. Navigate to 'Manual Deploy' section and click 'Deploy Branch'.
-12. When the build is done, click the 'view' button to launch the app. Alternatively click 'open app' located at the top right.
 ## **Local Deployment**
 
 **How to Fork**
@@ -377,14 +364,80 @@ Double check the Procfile has no blank lines under content.
 - A form will appear, you can edit the name and description or keep it the same.
 - Click the green "Create Fork" button.
 
-
 **How to Clone**
 - In the GitHub respository click the green Code button, that sits above the repository files.
 - When the dropdown appears choose from HTTP, SSH or GitHub CLI.
 - Click the copy button to the right of the URL to copy to your clipboard.
-- Open Git Bash / terminal, choose where you want to clone the files.
-- Type git clone and the following into the terminal https://github.com/abz2489/scrum-sisters.git
-- Press enter to create the clone.
+- Open Git Bash / terminal, make sure your current working directory is what you want to use for the cloned directory.
+- Type ```git clone``` followed by ```https://github.com/abz2489/scrum-sisters.git``` into the terminal and press enter.
+- If you're not using the Code Institute template then set up a virtual environment.
+- Install packages from requirements.txt file by running ```pip3 install -r requirements.txt``` in the terminal.
+
+## **Set up the PostgreSQL Database**
+**Set up ElephantSQL account**
+- Navigate to ElephantSQL.com and click "Log In".
+- Log in as normal or sign up wit Github.
+- You will be prompted to authorise ElephantSQL with your selected GitHub account. Click "Authorize ElephantSQL".
+- A Create New Team form will appear. You will need to:
+    - Add a Team Name
+    - Read the Terms of Service and select "Yes" to agree.
+    - Select "Yes" for GDPR and provide and email address.
+    - Click "Create Team".
+
+**Set up ElephantSQL database**
+- Click the green "Create New Instance" button.
+- Choose a name for your database.
+- Select the Tiny Turtle (Free) plan.
+- You can add tags or leave the tag field blank.
+- Click "Select Region" and select your nearest data centre.
+- Click "Review".
+- Check the details of your instance before clicking "Create Instance" in the bottom right.
+- Return to your ElephantSQL dashboard.
+- Click you database instance name.
+- In the URL section, copy your database URL to your clipboard by clicking the copy icon.
+
+Click “Create New Instance”.
+Set up your plan. (You can leave the 'tags' field blank.)
+Select region.
+Select a data center near you
+Then click “Review”.
+Check your details are correct and then click “Create instance”.
+Return to the ElephantSQL dashboard and click on the database instance name for this project
+In the URL section, clicking the copy icon will copy the database URL to your clipboard
+Leave this tab open, we will come back here later
+
+## **Heroku Deployment**
+1. Create a requirements.txt file containing project dependencies. To do this run ```pip3 freeze > requirements.txt```
+in the terminal.
+2. Create a procfile with 'web: python run.py'. To do this run ```echo web: python run.py > Procfile``` in the terminal.
+Double check the Procfile has no blank lines under content.
+3. Commit changes to github repository.
+4. Sign up or log in to Heroku. 
+5. Click the 'New' button on the right and select 'Create New App'.
+6. Enter app name (the chosen name needs to be unique) and select your nearest region. Click 'Create App'.
+7. Click the 'Deploy' tab on your app dashboard.
+8. In the 'Deployment Method' section click Github to connect. Search for your repository name and click 'Connect'.
+9. Click 'Settings', navigate to the config vars section and click 'Reveal Config Vars'.
+10. Enter the config vars from your env.py file:
+
+    | Key         | Value                 |
+    | ----------- | --------------------- |
+    | IP          | 0.0.0.0               |
+    | PORT        | 5000                  |
+    | DB_URL      | ENTER_YOUR_DB_URL     |
+    | SECRET_KEY  | ENTER_YOUR_SECRET_KEY |
+    | DEBUG       | TRUE\*                |
+
+    *The DEBUG variable can be deleted after debugging is finished. This is to avoid the situation of Debug mode accidentally being read as active or True by Heroku.
+11. Click 'Deploy' tab.
+12. You can now choose whether you prefer to allow 'Automatic Deploys' or to manually deploy each time you push changes to your repository. 
+
+    **Automatic Deploys**
+    - Navigate to 'Automatic Deploys' section and click 'enable automatic deploys'.
+
+    **Manual Deploys**
+    - Navigate to 'Manual Deploy' section and click 'Deploy Branch'
+13. When the build is done, click the 'view' button to launch the app. Alternatively click 'open app' located at the top right.
 
 
 # **Testing**
@@ -395,15 +448,15 @@ All tests can be found at [TESTING.md](TESTING.md).
 ## **Content**
 All content on the Scrum Sisters website was written by myself.
 
-[Clubs & Teams info](https://community.wru.wales/?utm_source=website&utm_medium=header%20link&utm_campaign=Community%20Site) 
+[WRU Official Website](https://community.wru.wales/?utm_source=website&utm_medium=header%20link&utm_campaign=Community%20Site) for information on local teams and hubs.
 
 ## **Media**
 [Nia Anwen Photography](https://www.facebook.com/niaanweneventphotography/) official photographer at Llantwit Fardre RFC for allowing me to use the fantastic image of the girls mid scrum for my hero image.
 
 ## **Code**
-[Codemy Youtube Channel](https://www.youtube.com/playlist?list=PLCC34OHNcOtolz2Vd9ZSeSXWc8Bq23yEz) This channel helped me understand and grasp Flask much better. I particularly founf the Flask Login and Flask Migrate videos.
+[Codemy Youtube Channel](https://www.youtube.com/playlist?list=PLCC34OHNcOtolz2Vd9ZSeSXWc8Bq23yEz) This channel helped me understand and grasp Flask much better. I particularly found the Flask Login and Flask Migrate videos.
 
 [W3Schools](https://www.w3schools.com/howto/howto_css_overlay.asp) used to refresh on css overlays.
 
 ## **Acknowledgments**
-Cohort facilitator Iris Smok for all her help and support with out cohort.
+Cohort facilitator Iris Smok for all her help and support with our cohort.
