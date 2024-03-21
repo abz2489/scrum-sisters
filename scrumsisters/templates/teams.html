@@ -5,7 +5,7 @@
             <h1 class="form-header">Teams</h1>
         </div>
 
-        <div class="container">
+        <div class="container columns-s columns-m columns-l">
             {% for team in teams %}
                 <div class="team-container">
                     <div class="card medium rounded">
@@ -14,7 +14,7 @@
                             <p><a href="#">This is a link</a></p>
                         </div>
                         <div class="card-reveal">
-                            <span class="card-title">{{ team[loop.index0] }}<i class="material-symbols-outlined right" id="close">close</i></span>
+                            <span class="card-title">{{ team.team_name }}<i class="material-symbols-outlined right" id="close">close</i></span>
                             <div class="social-container">
                                 <span><a href="{{ team.fb_url }}" target="_blank"><i class="fa-brands fa-facebook fa-2xl" id="fb"></i></a></span>
                                 <span><a href="{{ team.tiktok_url }}" target="_blank"><i class="fa-brands fa-tiktok fa-2xl" id="tiktok"></i></a></span>
@@ -33,10 +33,19 @@
                                     <td>Training Day 1:</td>
                                     <td>{{ team.day1 }}</td>
                                 </tr>
+
+                                {% if team.day2.id == 8 %}
+                                <tr hidden>
+                                    <td hidden>Training Day 2:</td>
+                                    <td hidden>{{ team.day2 }}</td>
+                                </tr hidden>
+                                {% else %}
                                 <tr>
                                     <td>Training Day 2:</td>
                                     <td>{{ team.day2 }}</td>
                                 </tr>
+                                {% endif %}
+
                                 <tr>
                                     <td>Training Time:</td>
                                     <td>{{ team.training_time }}</td>
