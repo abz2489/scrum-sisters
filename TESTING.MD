@@ -21,6 +21,12 @@ Implementing these fixes has stopped causing server errors and users can proceed
 <img src="testing/readme-images/ss-bug3.png" width="350"/>
 <img src="testing/readme-images/ss-fix3.png" width="350"/>
 
+4. Team profile page is displaying all teams. Fixed by removing an unecessary for loop.
+
+<img src="testing/readme-images/ss-bug4.png" width="350"/>
+<img src="testing/readme-images/ss-fix4.png" width="350"/>
+
+
 # **Manual Testing**
 
 # **Validation Testing**
