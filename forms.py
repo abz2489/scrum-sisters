@@ -42,12 +42,12 @@ class UserSignInForm(FlaskForm):
 
 # Add team form class
 class AddTeamForm(FlaskForm):
-    team_name = StringField("Team Name", validators=[DataRequired()])
+    team_name = StringField("Team Name", validators=[DataRequired(message="Please enter a team name")])
     club = SelectField("Club", coerce=int, validators=[DataRequired()])
     age_group = SelectField(
-        "Age Group", coerce=int, validators=[DataRequired()])
+        "Age Group", coerce=int, validators=[DataRequired(message="Please select the age group of your team")])
     training_day1 = SelectField(
-        "Training Day 1", coerce=int, validators=[InputRequired()])
+        "Training Day 1", coerce=int, validators=[InputRequired(message="Please select a training day")])
     training_day2 = SelectField(
         "Training Day 2", coerce=int)
     training_time = TimeField('Training Time', format='%H:%M', validators=[DataRequired(
