@@ -56,6 +56,18 @@ a, i, span {
   color: var(--warning);
 }
 
+.teams:hover {
+  background-color: #32E875;
+}
+
+.material-symbols-outlined:hover {
+  font-weight: 800;
+}
+
+.fa-brands:hover {
+  font-weight: 700;
+  font-size: 2.25rem;
+}
 /* MOBILE TOP BAR */
 #top-logo-bar {
     height: 100px;
