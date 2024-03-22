@@ -64,10 +64,6 @@ a, i, span {
   font-weight: 800;
 }
 
-.fa-brands:hover {
-  font-weight: 700;
-  font-size: 2.25rem;
-}
 /* MOBILE TOP BAR */
 #top-logo-bar {
     height: 100px;
@@ -180,6 +176,12 @@ nav#nav-bar.bottom-nav {
   .card.medium.rounded {
     border-radius: 10%;
   }
+
+  .fa-brands:hover {
+    font-weight: 700;
+    font-size: 2.25rem;
+  }
+
   /*REGISTER.HTML*/
   .form-container {
     width: 100%;
@@ -229,7 +231,6 @@ form#register-form > .btn-container > .btn {
 }
 
 /*SIGNIN.HTML*/
-
 form#signin-form > label {
     color: var(--light-text);
     font-weight: bold;
@@ -291,10 +292,6 @@ td:first-child {
   padding-top: 0.94rem;
 }
 
-.btn-container > #delete-acc {
-  background-color: var(--warning);
-}
-
 .yes-btn {
   background-color: var(--btn-green)
 }
@@ -326,11 +323,29 @@ td:first-child {
   border-radius: 10%;
 }
 
+.clubs-square, .club-team-squares:hover {
+  background-color: var(--black);
+}
+
 .user_clubs_teams {
   margin: auto;
   color: var(--light-text);
   font-size: 1.88rem;
   text-align: center;
+}
+
+.user_clubs_teams:hover{
+  color: #32E875
+}
+
+.delete {
+  background-color: var(--warning);
+  color: var(--black);
+}
+
+.delete:hover {
+  background-color: var(--black);
+  color: var(--warning);
 }
 
 
@@ -350,6 +365,10 @@ div.container.team-container {
 
 .club-team-squares.add-team {
   margin-top: 1.56rem;
+}
+
+.add-team-text {
+  color: var(--light-text);
 }
 
 #add-bg.btn-floating.btn-large {
