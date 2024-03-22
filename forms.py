@@ -15,7 +15,8 @@ from wtforms.validators import (
     Optional,
     URL,
     InputRequired,
-    Email
+    Email,
+    Length
     )
 import email_validator
 
@@ -26,7 +27,7 @@ class UserRegistrationForm(FlaskForm):
     email = StringField("Email", validators=[DataRequired(), Email(message="Please enter a valid email address") ])
     club = SelectField("Clubs", coerce=int, validators=[DataRequired()])
     user_password = PasswordField(
-        'Password', validators=[DataRequired(), EqualTo(
+        'Password', validators=[DataRequired(), Length(min=8, message="Password must be 8 characters or more!") ,EqualTo(
             'confirm_password', message="Passwords do not match!")])
     confirm_password = PasswordField(
         'Confirm_password', validators=[DataRequired()])
