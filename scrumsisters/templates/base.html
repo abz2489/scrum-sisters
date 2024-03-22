@@ -17,9 +17,9 @@
 
 <body>
   <!--TOP LOGO BAR-->
-  <nav>
+  <nav class="navbar">
     <div class="valign-wrapper" id="top-logo-bar">
-      <a href="#" class="brand-logo center"><img class="logo"
+      <a href="{{ url_for('home') }}" class="brand-logo center"><img class="logo"
           src="{{ url_for('static', filename='images/ss-logo.png')}}" alt="ScrumSisters Logo"></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="{{ url_for('home') }}">Home</a></li>
