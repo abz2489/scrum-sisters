@@ -56,10 +56,6 @@ a, i, span {
   color: var(--warning);
 }
 
-.columns-s {
-  columns: 1;
-}
-
 /* MOBILE TOP BAR */
 #top-logo-bar {
     height: 100px;
@@ -148,12 +144,15 @@ nav#nav-bar.bottom-nav {
     color: var(--black);
     margin: auto;
     margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .team-container > .card.medium {
     height: 15rem;
     width: 18rem;
     margin: auto;
+    margin-bottom: 2.5rem;
   }
 
   .card-title, #more, #close, #fb, #tiktok, #insta {
@@ -328,7 +327,7 @@ div.container.team-container {
   text-align: center;
 }
 
-.club_team_squares {
+.club-team-squares {
   width: 12.5rem;
   height: 12.5rem;
   background-color: var(--square);
@@ -337,7 +336,7 @@ div.container.team-container {
   margin-top: 1.56rem;
 }
 
-.club_team_squares.add-team {
+.club-team-squares.add-team {
   margin-top: 1.56rem;
 }
 
@@ -398,10 +397,6 @@ div.container.team-container {
     left: 65%;
     top: 2px;
   }
-
-  .columns-m {
-    columns: 2;
-  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -420,10 +415,5 @@ div.container.team-container {
   /*PROFILE.HTML*/
   .card-panel#profile-panel {
     width: 50%;
-  }
-
-  /*TEAMS.HTML*/
-  .columns-l {
-    columns: 3;
   }
 }
