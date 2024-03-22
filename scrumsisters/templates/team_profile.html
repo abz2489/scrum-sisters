@@ -24,10 +24,19 @@
                         <td>Training Day 1:</td>
                         <td>{{ team.day1 }}</td>
                     </tr>
+
+                    {% if team.day2.id == 8 %}
+                    <tr hidden>
+                        <td hidden>Training Day 2:</td>
+                        <td hidden>{{ team.day2 }}</td>
+                    </tr hidden>
+                    {% else %}
                     <tr>
                         <td>Training Day 2:</td>
                         <td>{{ team.day2 }}</td>
                     </tr>
+                    {% endif %}
+
                     <tr>
                         <td>Training Time:</td>
                         <td>{{ team.training_time }}</td>
