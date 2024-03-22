@@ -5,7 +5,7 @@
 [View the Scrum Sisters live website here](https://scrum-sisters-f6136ef90930.herokuapp.com/)
 
 # **Introduction**
-Scrum Sisters is an app for users to find women and girls rugby teams in South Wales. The app serves as a solution to a problem that I had when finding women's teams in my area. There are a wealth of rugby clubs in South Wales, but not all of them have female teams. When I was looking for a local team to play for, I found that information I did find was often wrong. Scrum Sisters allows users to register an account, with which they can add a team to the database, edit their team's information and delete the team altogether. Visitors to the Scrum Sisters website will be able to find teams and view the teams profile only.
+Scrum Sisters is an app for users to find women and girls rugby teams in South Wales. The app serves as a solution to a problem that I had when finding women's teams in my area. There are a wealth of rugby clubs in South Wales, but not all of them have female teams. When I was looking for a local team to play for, I found that information I did find was often wrong. Rugby clubs can are encouraged to register an account and upload all their female teams. Visitors to the Scrum Sisters website will be able to find teams and view the teams profile information. 
 
 
 # **UX/UI**
@@ -43,6 +43,7 @@ Responsive design for use on mobile, tablet and desktops.
 
 **Navigation Bar** - No account or not signed in
 - Scrum Sisters logo
+- Home nav link
 - Teams nav link
 - Register nav link
 - Sign in nav link
@@ -50,8 +51,7 @@ Responsive design for use on mobile, tablet and desktops.
 **Navigation Bar** - When User Registered and Signed in
 - Scrum Sisters logo
 - Teams nav link
-- My Teams nav link
-- My account nav link
+- Profile nav link
 - Sign Out nav link
 
 **Footer**
@@ -61,7 +61,7 @@ Responsive design for use on mobile, tablet and desktops.
 **Home Page**
 - Nav Bar
 - Footer
-- Hero image (to be chosen)
+- Hero image of Pink Rhinos scrum.
 - Button to view teams under hero image
 - Teams carousel - teams carousel was removed along with the decision to include profile pictures
 - Prompt to register
@@ -70,21 +70,7 @@ Responsive design for use on mobile, tablet and desktops.
 - Teams Title
 - Grid tiles of teams
 - View Profile button for each tile - Amended to using card reveal
-- Pagination
-    - 5 teams per page for mobile
-    - 9 teams per page for tablet
-    - 12 teams per page for desktop
-
-**Team Profile**
-- Team Name
-- Club Name
-- Age Group
-- Training Days & Times
-- Training location
-- Social media links
-- Edit button (available for team admin)
-- Delete button (available for team admin)
-    - Modal pop up to confirm deletion
+- Pagination - Moved to future features
 
 **Registration Page**
 - Form
@@ -93,13 +79,37 @@ Responsive design for use on mobile, tablet and desktops.
 - Email
 - Check if email exists
 - Error message for invalid email
-- Error message for existing Username
+- Error message for existing Username - No longer necessary as using first and last name.
 - Password (min 8 characters)
-- Hashed using Werkszeug
-- Error message for invalid password
+- Password Hashed using Werkszeug
 - Confirm Password
+- Select Rugby club
 - Submit button
 - POST method
+
+**Profile Page** accessible only to the registered/logged in users
+- Displays user's details
+- Full Name
+- Email address
+- Option to change details.
+- Option to delete account.
+    - Modal pop up to confirm deletion
+- My Club section with hyperlink to club page
+
+**Club Page** accessible only to the logged in users
+- Displays teams that come under the club
+- Add team button for user's to add new teams
+
+**Team Profile** - accessible only to the logged in users
+- Team Name
+- Club Name
+- Age Group
+- Training Days & Times
+- Training location
+- Social media links
+- Edit button 
+- Delete button
+    - Modal pop up to confirm deletion
 
 **Sign In Page**
 - Form
@@ -107,40 +117,48 @@ Responsive design for use on mobile, tablet and desktops.
 - Password
 - Sign In Button
 - Checks Username and hashed Password match
-- On successful sign in direct to My Teams page
+- On successful sign in direct to Profile page
 - Link to Registration page
 
-**My Account Page**
-- Displays user's details
-- Full Name
-- Email address
-- Option to change details.
-- Option to delete account.
-    - Modal pop up to confirm deletion
-
-**My Teams Page** (available to account holders only)
-- My Teams tile
-- Grid tiles of user teams
+**Team Profile** accessible only to the registered/logged in users
+- Team Title
+- Display team info
 - Team Name
+- Age Group
+- Training Day
+- Training Time
+- Training Location
 - Edit button
 - Delete button
     - Modal pop up to confirm deletion
-- Empty tile at the end of the grid with Add Team button
 
-**Add Team Page** (available to account holders only)
+**Add Team Page** accessible only to the registered/logged in users
 - Form
 - Team Name
-- Club Name
+- Club Name - already populated from user data
 - Age group - dropown selection
-- Training days - multiple selection
-- Training time - dropdown selection
+- Training days - drowpdown selection
+- Training time
 - Training location
-- Social media URL 
+- Social media URLs
+- User id - already populated from user data 
+
+**Edit Team Page** accessible only to the registered/logged in users
+All data will be pre-populated from previously filled out data.
+- Form
+- Team Name
+- Club Name - already populated from user data
+- Age group - dropown selection
+- Training days - drowpdown selection
+- Training time
+- Training location
+- Social media URLs
+- User id - already populated from user data 
 
 ### Future Features
-- Introduce Clubs
-    - Club and Users have one to one relationship
-    - Club and Teams have one to many relationship
+- Profile pictures for clubs & teams
+- Public profile page with team news, fixture updates and announcements.
+- Coach and player registration with coach/player profiles.
 
 
 ## Structure
