@@ -187,6 +187,7 @@ def add_team(user_club_id):
             )
             db.session.add(team)
             db.session.commit()
+            flash("Team registered successfully!")
     return render_template('add_team.html', form=form)
 
 
@@ -247,4 +248,5 @@ def delete_team(team_id):
     team = Teams.query.get_or_404(team_id)
     db.session.delete(team)
     db.session.commit()
+    flash("Team Deleted Successfully!")
     return redirect(url_for('club_page', club_id=current_user.club_id))
